@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari funcional</title>
+</head>
+<body>
+    <div style="margin-left: 25px; margin-top: 30px;">
+        <form action="" method="">
+            <label for="nom">Nom:</label>
+            <input type="text" placeholder="El teu nom" id="nom" size="15" name="nom">
+            <br>
+            <label for="cognoms">Cognoms:</label>
+            <input type="text" placeholder="Els teus cognoms" id="cognoms" size="25" name="cognoms" style="margin-top: 10px;">
+            <br>
+            <label for="datadenaixement">Data de naixement:</label>
+            <input type="date" min="2002-01-01" max="2020-01-01" placeholder="Data de naixement" id="datadenaixement" size="10" name="datadenaixement" style="margin-top: 10px;">
+            <br>
+            <label for="edat">Edat:</label>
+            <input type="number" placeholder="Edat" id="edat" size="" name="edat" style="margin-top: 10px;">
+            <br>
+            <label for="data">Hora visita:</label>
+            <input type="datetime-local" placeholder="Data" id="data" size="15" name="data" style="margin-top: 10px;">
+            <br>
+            <br>
+            <label for="color">Color:</label>
+            <input type="color" placeholder="color" id="color" size="5" name="color">
+            <br>
+            <label for="url">Url:</label>
+            <input type="url" placeholder="Url" id="url" size="25" name="url" value="https://www." style="margin-top: 10px;">
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" placeholder="E-mail" id="email" size="25" name="email" style="margin-top: 10px;">
+            <br>
+            <label for="comentaris">Comentaris:</label>
+            <textarea cols="50" rows="5" style="margin-top: 10px;"></textarea>
+            <br>
+            <label for="contrasenya">Contrasenya:</label>
+            <input type="password" placeholder="Contrasenya" id="contrasenya" size="12" name="contrasenya" style="margin-top: 10px;">
+            <br>
+            <label>Horari:</label>
+            <input name="horari" type="radio" value="Matins" style="margin-top: 10px;">Matins
+            <input name="horari" value="Tardes" type="radio">Tardes
+            <input name="horari" value="Vespres" type="radio">Vespres
+            <br>
+            <label>Estàs d'acord?</label>
+            <input type="checkbox" style="margin-top: 10px;">
+            <br>
+            <label>Dia de la setmana:</label>
+            <select name="dia" id="" style="margin-top: 10px;" size="4" multiple>
+                <option value="Dilluns">Dilluns</option>
+                <option value="Dimarts">Dimarts</option>
+                <option value="Dimecres">Dimecres</option>
+                <option value="Dijous">Dijous</option>
+            </select>
+            <br>
+            <input type="submit" value="Enviar formulari" style="margin-top: 10px;">
+            <br>
+            <input type="reset" value="Restableix formulari" style="margin-top: 10px;">
+            <br>
+            <input type="button" value="Botó trapella" id="" style="margin-top: 10px;">
+        </form>
+    </div>
+</body>
+</html>
