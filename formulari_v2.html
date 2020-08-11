@@ -19,45 +19,46 @@
         <h1>FORMULARIO DE INSCRIPCIÓN PICE</h1>
         <h3>PLAN DE CAPACITACIÓN 2020 | PICE</h3>
     </div>
+    <form>
     <table border="1" align="center" width="1045">
         <tr>
             <th colspan="4">DATOS BÁSICOS</th>
         </tr>
         <tr>
-            <th width="225" align="left">NOMBRE</th>
-            <td width="" colspan="3"></td>
+            <th width="225" align="left"><label for="nom">NOMBRE</label></th>
+            <td width="" colspan="3"><input type="text" placeholder="" id="nom" size="120" name="nom"></td>
         </tr>
         <tr>
-            <th align="left">APELLIDOS</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="cognoms">APELLIDOS</label></th>
+            <td colspan="3"><input type="text" placeholder="" id="cognoms" size="120" name="cognoms"></td>
         </tr>
         <tr>
-            <th align="left">FECHA NACIMIENTO</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="datadenaixement">FECHA NACIMIENTO</label></th>
+            <td colspan="3"><input type="date" placeholder="" id="datadenaixement" size="120" name="datadenaixement"></td>
         </tr>
         <tr>
-            <th align="left">NIF / NIE</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="nifnie">NIF / NIE</label></th>
+            <td colspan="3"><input type="text" placeholder="" id="nifnie" size="120" name="nifnie"></td>
         </tr>
         <tr>
-            <th align="left">DOMICILIO</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="domicili">DOMICILIO</label></th>
+            <td colspan="3"><input type="text" placeholder="" id="domicili" size="120" name="domicili"></td>
         </tr>
         <tr>
-            <th align="left">LOCALIDAD</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="localitat">LOCALIDAD</label></th>
+            <td colspan="3"><input type="text" placeholder="" id="localitat" size="120" name="localitat"></td>
         </tr>
         <tr>
-            <th align="left">CÓDIGO POSTAL</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="codipostal">CÓDIGO POSTAL</label></th>
+            <td colspan="3"><input type="number" placeholder="" id="codipostal" size="120" name="codipostal"></td>
         </tr>
         <tr>
-            <th align="left">TELÉFONO</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="telefon">TELÉFONO</label></th>
+            <td colspan="3"><input type="number" placeholder="" id="telefon" size="120" name="telefon"></td>
         </tr>
         <tr>
-            <th align="left">E-MAIL</th>
-            <td colspan="3"></td>
+            <th align="left"><label for="email">E-MAIL</label></th>
+            <td colspan="3"><input type="email" placeholder="" id="email" size="120" name="email"></td>
         </tr>
         <tr>
             <th align="left">CÁMARA DE COMERCIO</th>
@@ -65,92 +66,93 @@
         </tr>
         <tr>
             <th align="left" rowspan="4">SITUACIÓN LABORAL:<br>(marcar una opción)</th>
-            <td colspan="2" width="500">Inactivo (desempleado no inscrito en SEPE)</td>
-            <td width="" colspan=""> &nbsp;</td>
+            <td colspan="2" width="500"><label for="inactiusepe">Inactivo (desempleado no inscrito en SEPE)</label></td>
+            <td width="" colspan="" align="center"><input type="radio" id="inactiusepe" name="situaciolaboral"></td>
         </tr>
         <tr>
             <td rowspan="3">Desempleado<br>(inscrito en SEPE)</td>
-            <td align="center">Menos de 6 meses inscrito</td>
-            <td width="300">&nbsp;</td>
+            <td align="center"><label for="menys6mesos">Menos de 6 meses inscrito</label></td>
+            <td width="300" align="center"><input type="radio" id="menys6mesos" name="situaciolaboral"></td>
         </tr>
         <tr>
-            <td align="center">Entre 6 y 12 meses inscrito</td>
-            <td>&nbsp;</td>
+            <td align="center"><label for="entre6i12">Entre 6 y 12 meses inscrito</label></td>
+            <td align="center"><input type="radio" id="entre6i12" name="situaciolaboral"></td>
         </tr>
         <tr>
-            <td align="center">Más 12 meses inscrito</td>
-            <td>&nbsp;</td>
+            <td align="center"><label for="mes12">Más 12 meses inscrito</label></td>
+            <td align="center"><input type="radio" id="mes12" name="situaciolaboral"></td>
         </tr>
     </table>
     <br>
     <table border="1" align="center" width="1045">
         <tr>
             <th rowspan="12" width="125">NIVEL MÁXIMO DE ESTUDIOS ALCANZADO:(marcar una opción)</th>
-            <td colspan="2" width="525">Sin enseñanza primaria</td>
-            <td>&nbsp;</td>
+            <td colspan="2" width="525"><label for="noprimaria">Sin enseñanza primaria</label></td>
+            <td align="center"><input type="radio" id="noprimaria" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">Enseñanza primaria</td>
-            <td width="150">&nbsp;</td>
+            <td colspan="2"><label for="siprimaria">Enseñanza primaria</label></td>
+            <td width="150" align="center"><input type="radio" id="siprimaria" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">1º 2º 3º 4º ESO</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="eso">1º 2º 3º 4º ESO</label></td>
+            <td align="center"><input type="radio" id="eso" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">FP Básica</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="fpbasica">FP Básica</label></td>
+            <td align="center"><input type="radio" id="fpbasica" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">FP grado medio</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="fpmitja">FP grado medio</label></td>
+            <td align="center"><input type="radio" id="fpmitja" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">Bachillerato</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="batx">Bachillerato</label></td>
+            <td align="center"><input type="radio" id="batx" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">Enseñanza postsecundario no terciaria (certificados profesionalidad nivel 3)</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="postsec">Enseñanza postsecundario no terciaria (certificados profesionalidad nivel 3)</label></td>
+            <td align="center"><input type="radio" id="postsec" name="estudis"></td>
         </tr>
         <tr>
             <td rowspan="3" valign="top" width="250">Educación Superior</td>
-            <td align="center" width="300">FP Grado Superior</td>
-            <td>&nbsp;</td>
+            <td align="center" width="300"><label for="fpsuperior">FP Grado Superior</label></td>
+            <td align="center"><input type="radio" id="fpsuperior" name="estudis"></td>
         </tr>
         <tr>
-            <td align="center">Diplomatura universitaria o similar (240<br> crédito ECTS)</td>
-            <td>&nbsp;</td>
+            <td align="center"><label for="diplouni">Diplomatura universitaria o similar (240<br> crédito ECTS)</label></td>
+            <td align="center"><input type="radio" id="diplouni" name="estudis"></td>
         </tr>
         <tr>
-            <td align="center">Licenciatura universitaria o similar (más<br> de 240 crédito ECTS)</td>
-            <td>&nbsp;</td>
+            <td align="center"><label for="licenuni">Licenciatura universitaria o similar (más<br> de 240 crédito ECTS)</label></td>
+            <td align="center"><input type="radio" id="licenuni" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">Postgrado Univertsitario</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="postuni">Postgrado Univertsitario</label></td>
+            <td align="center"><input type="radio" id="postuni" name="estudis"></td>
         </tr>
         <tr>
-            <td colspan="2">Enseñanzas doctorado</td>
-            <td>&nbsp;</td>
+            <td colspan="2"><label for="doctorat">Enseñanzas doctorado</label></td>
+            <td align="center"><input type="radio" id="doctorat" name="estudis"></td>
         </tr>
     </table>
     <br>
     <table border="1" align="center" width="1045">
         <tr>
             <th rowspan="3" width="200">OTROS DATOS DEL JOVEN<br>(CUMPLIMENTACIÓN VOLUNTARIA)<br><br>Marcar las opciones que corresponden</th>
-            <th align="left" valign="top" height="35">¿Personas sin hogar o afectadas por la exclusión en materia de vivienda?</th>
-            <td width="150">&nbsp;</td>
+            <th align="left" valign="top" height="35"><label for="homeless">¿Personas sin hogar o afectadas por la exclusión en materia de vivienda?</label></th>
+            <td width="150" align="center"><input type="checkbox" id="homeless" name="homeless"></td>
         </tr>
         <tr>
-            <th align="left">¿Discapacidad reconocida?</th>
-            <td>&nbsp;</td>
+            <th align="left"><label for="discapacitat">¿Discapacidad reconocida?</label></th>
+            <td align="center"><input type="checkbox" id="discapacitat" name="discapacitat"></td>
         </tr>
         <tr>
-            <th align="left" height="100">¿Inmigrante, participante de origen extranjero, minoria?</th>
-            <td>&nbsp;</td>
+            <th align="left" height="100"><label for="inmigrant">¿Inmigrante, participante de origen extranjero, minoria?</label></th>
+            <td align="center"><input type="checkbox" id="inmigrant" name="inmigrant"></td>
         </tr>
     </table>
+    </form>
     <br>
     <table align="center" width="1045">
         <tr>
@@ -160,8 +162,8 @@
             <th align="left" colspan="2"><br><u>A) Jóvenes que se encuentran en sus cuatro primeros meses de inscripción en el SNGJ:</u></th>
         </tr>
         <tr>
-            <td width="200" align="right" valign="top"><div id="rectangle" style="width:40px; height:15px; border:1px solid #000; border-radius: 5px;"></div></td>
-            <td align="justify">Me encuentro inscrito como beneficiario en el Sistema Nacional de Garantía Juvenil<br>desde el día __/__/____, sin que hayan transcurrido cuatro meses desde dicha<br>fecha.</td>
+            <td width="200" align="right" valign="top"><div id="rectangle" style="width:40px; height:20px; border:1px solid #000; border-radius: 5px;" align="center"><input type="checkbox" id="declaracio" name="declaracio"></div></td>
+            <td align="justify"><label for="declaracio">Me encuentro inscrito como beneficiario en el Sistema Nacional de Garantía Juvenil<br></label>desde el día <input type="date" placeholder="__/__/____" id="data" name="data" size="10">, sin que hayan transcurrido cuatro meses desde dicha<br>fecha.</td>
         </tr>
     </table>
 </body>
