@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taules | Prova CSS</title>
+    <style type="text/css">
+        thead th{
+            width: 500px;
+            background-color: steelblue;
+        }
+        tbody th{
+            width: 30px;
+        }
+        tbody td{
+            width: 15px;
+        }
+        tbody tr:nth-child(even){
+            background-color:steelblue;
+        }
+        tfoot th{
+            width: 30px;
+        }
+        tfoot th{
+            height: 35px;
+        }
+        tfoot tr:last-child{
+            background-color:steelblue;
+        }
+        colgroup col:nth-child(odd){
+            background-color: teal !important;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <colgroup>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="10" align="center">VENDES 2019-2020</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+                <td colspan="4" align="center">2019</td>
+                <td colspan="4" align="center">2020</td>
+            </tr>
+            <tr>
+                <td colspan="2">&nbsp;</td>
+                <td align="center">P</td>
+                <td align="center">E</td>
+                <td align="center">T</td>
+                <td align="center">H</td>
+                <td align="center">P</td>
+                <td align="center">E</td>
+                <td align="center">T</td>
+                <td align="center">H</td>
+            </tr>
+            <tr>
+                <th rowspan="3">B</th>
+                <td align="center">BCN</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">BDL</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">LLB</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <th rowspan="3">G</th>
+                <td align="center">GIR</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">FIG</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">RUS</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <th align="center" rowspan="3">T</th>
+                <td align="center">TAR</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">MAR</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">JAR</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <th align="center" rowspan="3">L</th>
+                <td align="center">LLE</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">LLA</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center">LLI</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="2" align="center">TOTALS</th>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+                <td align="center">&nbsp;</td>
+            </tr>
+            <tr>
+                <th colspan="2" align="center">TOTALS ANUALS</th>
+                <td colspan="4"></td>
+                <td colspan="4"></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
