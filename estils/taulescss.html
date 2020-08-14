@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taules | Prova CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;700&display=swap" rel="stylesheet">
     <style type="text/css">
+        body{
+            font-family: 'Baloo Tamma 2', cursive;
+        }
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 75%;
+            }
+        th{
+            font-family: 'Baloo Tamma 2', cursive;
+        }
+        th, td{
+            padding: 5px;
+        }
+        thead tr{
+            border-bottom: 2px solid black;
+        }
         thead th{
             width: 500px;
-            background-color: steelblue;
+            background-color: rgba(70, 131, 180, 0.5);
+            padding-top: 8px
         }
         tbody th{
             width: 30px;
@@ -16,19 +38,22 @@
             width: 15px;
         }
         tbody tr:nth-child(even){
-            background-color:steelblue;
+            background-color:rgba(70, 131, 180, 0.5);
+        }
+        tfoot tr:first-child{
+            border-top: 2px solid black;
         }
         tfoot th{
-            width: 30px;
+            padding: 12px 8px 8px 8px;
         }
         tfoot th{
             height: 35px;
         }
         tfoot tr:last-child{
-            background-color:steelblue;
+            background-color:rgba(70, 131, 180, 0.5);
         }
         colgroup col:nth-child(odd){
-            background-color: teal !important;
+            background-color: rgba(0, 128, 128, 0.5);
         }
     </style>
 </head>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Més CSS que mai</title>
+    <link rel="stylesheet" type="text/css" href=""/>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        body{
+            margin-left: 100px;
+            background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+        }
+        h1{
+            color: rgb(0, 172, 228);
+            /*text-decoration: line-through;*/
+            font-family: 'Permanent Marker', cursive;
+            /*font-style: italic;*/
+            font-weight: bold;
+            font-size: 26pt;
+        }
+        img{
+            max-width: 75%;
+            height: auto;
+        }
+        p{
+            text-align: justify;
+            font-family: Montserrat;
+            font-size: 12pt;
+            line-height: 15pt; /*Interlineat*/
+            text-indent: 25px; /*Que la primera linia començi més tard*/
+            /*word-spacing: 12pt;*/
+            letter-spacing: 1pt;
+        }
+        @font-face {
+            font-family: Montserrat;
+            src: url(Montserrat-Regular.otf);
+        }
+        .exclamar{
+            color: rgb(0, 172, 228);
+            font-family: 'Permanent Marker', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Més CSS que mai!</h1>
+        <img src="img/css.png" alt="Imatge CSS">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus perspiciatis dolorem <span class="exclamar">magni mollitia</span> sint suscipit pariatur quod ab neque? Numquam quisquam commodi esse ipsam expedita, nisi facilis iusto exercitationem aliquid? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum ab architecto harum ex <span class="exclamar">repellendus maxime</span> exercitationem est deleniti, aspernatur dolorem? Doloremque itaque rerum illum architecto debitis est vero alias officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et culpa doloribus incidunt quas laboriosam officiis numquam explicabo, magnam autem, dolorum minus delectus omnis? Alias, id modi? Dignissimos suscipit libero vitae.</p>
+    </div>
+</body>
+</html>

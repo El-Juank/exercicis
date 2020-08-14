@@ -1,0 +1,37 @@
+body{
+    margin-left: 30px;
+    background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: sans-serif;
+    text-align: justify;
+    color: rgb(255, 255, 255);
+}
+
+a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+a:hover{
+    color: rgb(255, 0, 255);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
