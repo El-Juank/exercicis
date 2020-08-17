@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relative</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap" rel="stylesheet"/>
+    <style type="text/css">
+      #container {
+        background-color: beige;
+        font-family: "Dosis", sans-serif;
+        margin: 0 auto;
+        width: 1200px;
+        height: 800px;
+      }
+      .prod{
+        background-color: chocolate;
+        width: 350px;
+        height: 600px;
+        margin: 50px; /*Ajustar-se al centre*/
+        position: relative;
+        float: left;
+      }
+      .prod h1{
+          font-weight: 700;
+          padding: 5px 0px 0px 15px;
+      }
+      .prod img{
+        width: 35%;
+        display:block;
+        margin:auto;
+      }
+      .prod p{
+          text-align: center;
+          padding: 25px;
+      }
+      .prod button{
+        display:block;
+        margin:auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <div class="prod">
+        <h1>Brownies</h1>
+        <img src="img/brownie.jpg"/>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
+            neque ipsum. Voluptatem, ipsum at cum vitae atque ullam eaque illum! Non
+            sunt in fuga consequatur animi alias? Accusantium, dolores harum.
+        </p>
+        <button>Comprar</button>
+        </div>
+        <div class="prod">
+        <h1>Milkshakes</h1>
+        <img src="img/milkshake.jpg"/>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
+            neque ipsum. Voluptatem, ipsum at cum vitae atque ullam eaque illum! Non
+            sunt in fuga consequatur animi alias? Accusantium, dolores harum.
+        </p>
+        <button>Comprar</button>
+    </div>
+    <div class="prod">
+        <h1>Oreos</h1>
+        <img src="img/oreos.jpg"/>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
+            neque ipsum. Voluptatem, ipsum at cum vitae atque ullam eaque illum! Non
+            sunt in fuga consequatur animi alias? Accusantium, dolores harum.
+        </p>
+        <button>Comprar</button>
+    </div>
+    <div class="prod">
+        <h1>Pancakes</h1>
+        <img src="img/pancakes.jpg"/>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
+            neque ipsum. Voluptatem, ipsum at cum vitae atque ullam eaque illum! Non
+            sunt in fuga consequatur animi alias? Accusantium, dolores harum.
+        </p>
+        <button>Comprar</button>
+    </div>
+    </div>
+  </body>
+</html>
