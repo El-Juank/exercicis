@@ -24,10 +24,6 @@ body{
     color: white; 
 }
 
-#menu1 ul{
-    
-}
-
 #menu1 li{
     width: 155px;
     background-color: #d14836;
@@ -55,6 +51,11 @@ body{
 
 #cos h1, h2{
     color: #d14836;
+    font-size: 160%;
+}
+
+#cos p{
+    font-size: 9pt;
 }
 
 #cos a{
@@ -68,10 +69,9 @@ body{
     padding: 10px;
 }
 
-#footer{
-
-}
-
 #footer p{
-
+    color: white;
+    font-size: 8pt;
+    text-align: center;
+    padding: 10px;
 }
