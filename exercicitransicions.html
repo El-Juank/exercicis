@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Transicions</title>
+    <style type="text/css">
+        body{
+            overflow: hidden;
+            background-image: url(img/desert.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+        #foto img{
+            display: block;
+            margin: 0 auto;
+            width: 800px;
+        }
+        #capa1{
+            position: absolute; right: 50%;
+            /*border: 1px solid black;*/
+            width: 400px; height: 400px;
+            background-color: rgb(251, 34, 60);
+            transition: right 2s ease;
+        }
+        #capa1:hover{
+            /*opacity: 0;*/
+            right: 100%;
+        }
+        #capa2{
+            position: absolute; left: 50%;
+            /*border: 1px solid black;*/
+            width: 400px; height: 400px;
+            background-color: rgb(56, 148, 223);
+            transition: left 2s ease;
+        }
+        #capa2:hover{
+            /*opacity: 0;*/
+            left: 100%;
+        }
+        #capa3{
+            position: absolute; right: 50%; top: 50%;
+            /*border: 1px solid black;*/
+            width: 400px; height: 401px;
+            background-color: rgb(254, 181, 8);
+            transition: right 2s ease;
+        }
+        #capa3:hover{
+            /*opacity: 0;*/
+            right: 100%;
+        }
+        #capa4{position: absolute; left: 50%; top: 50%;
+            /*border: 1px solid black;*/
+            width: 400px; height: 401px;
+            background-color: rgb(86, 177, 47);
+            transition: left 2s ease;
+        }
+        #capa4:hover{
+            /*opacity: 0;*/
+            left: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="capa1"></div>
+    <div id="capa2"></div>
+    <div id="capa3"></div>
+    <div id="capa4"></div>
+    <div id="foto">
+        <img src="img/camells.jpg" alt="Uns quants camells">
+    </div>
+</body>
+</html>

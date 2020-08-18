@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici Pestanyes</title>
+    <style type="text/css">
+        #pestanya1{
+            background-color: rgb(255, 88, 177);
+            width: 200px;
+            height: 100px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            top: -60px;
+            left: 25%;
+        }
+        #pestanya1:hover{
+            top:0px;
+            cursor: pointer;
+            background-color: deeppink;
+            transition: all 500ms; /*Posar les transicions del :hover a 500 milisegons*/
+        }
+        #pestanya2{
+            background-color: rgb(255, 88, 177);
+            width: 200px;
+            height: 100px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            margin-left: -100px;
+        }
+        #pestanya2:hover{
+            top:0px;
+            cursor: pointer;
+            background-color: deeppink;
+            transition: all 500ms;
+        }
+        #pestanya3{
+            background-color: rgb(255, 88, 177);
+            width: 200px;
+            height: 100px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            top: -60px;
+            left: 61%;
+        }
+        #pestanya3:hover{
+            top:0px;
+            cursor: pointer;
+            background-color: deeppink;
+            transition: all 500ms;
+        }
+        /*Pestanyes Dreta*/
+        #pestanya4{
+            background-color:rgb(87, 213, 255);
+            width: 100px;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            right: -60px;
+            top: 100px;
+        }
+        #pestanya4:hover{
+            right:0px;
+            cursor: pointer;
+            background-color:deepskyblue;
+            transition: all 500ms;
+        }
+        #pestanya5{
+            background-color:rgb(87, 213, 255);
+            width: 100px;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            right: -60px;
+            top: 325px;
+        }
+        #pestanya5:hover{
+            right:0px;
+            cursor: pointer;
+            background-color:deepskyblue;
+            transition: all 500ms;
+        }
+        #pestanya6{
+            background-color:rgb(87, 213, 255);
+            width: 100px;
+            height: 200px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            position: absolute;
+            right: -60px;
+            top: 550px;
+        }
+        #pestanya6:hover{
+            right:0px;
+            cursor: pointer;
+            background-color:deepskyblue;
+            transition: all 500ms;
+        }
+        /*Pestanyes Abaix*/
+        #pestanya7{
+            background-color:rgb(200, 255, 118);
+            width: 200px;
+            height: 100px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            position: absolute;
+            bottom: -60px;
+            left: 25%;
+        }
+        #pestanya7:hover{
+            bottom:0px;
+            cursor: pointer;
+            background-color:greenyellow;
+            transition: all 500ms;
+        }
+        #pestanya8{
+            background-color:rgb(200, 255, 118);
+            width: 200px;
+            height: 100px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            margin-left: -100px;
+        }
+        #pestanya8:hover{
+            bottom:0px;
+            cursor: pointer;
+            background-color:greenyellow;
+            transition: all 500ms;
+        }
+        #pestanya9{
+            background-color:rgb(200, 255, 118);
+            width: 200px;
+            height: 100px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            position: absolute;
+            bottom: -60px;
+            left: 61%;
+        }
+        #pestanya9:hover{
+            bottom:0px;
+            cursor: pointer;
+            background-color:greenyellow;
+            transition: all 500ms;
+        }
+        /*Pestanyes Esquerra*/
+            
+        /*Fons núvols*/
+        *{ margin: 0; padding: 0;}
+        body {
+	    overflow: hidden;/*To hide the horizontal scroller appearing during the animation*/
+        }
+        #clouds{
+	        padding: 200px 0;
+	        background: #c9dbe9;
+	        background: -webkit-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	        background: -linear-gradient(top, #c9dbe9 0%, #fff 100%);
+	        background: -moz-linear-gradient(top, #c9dbe9 0%, #fff 100%);
+        }
+        .cloud {
+	        width: 200px; height: 60px;
+	        background: #fff;
+	        border-radius: 200px;
+	        -moz-border-radius: 200px;
+	        -webkit-border-radius: 200px;
+	        position: relative; 
+        }
+        .cloud:before, .cloud:after {
+	        content: '';
+	        position: absolute; 
+	        background: #fff;
+            width: 100px;
+            height: 80px;
+	        position: absolute; top: -15px; left: 10px;
+	        border-radius: 100px;
+	        -moz-border-radius: 100px;
+	        -webkit-border-radius: 100px;
+	        -webkit-transform: rotate(30deg);
+	        transform: rotate(30deg);
+	        -moz-transform: rotate(30deg);
+        }
+        .cloud:after {
+	        width: 120px; height: 120px;
+	        top: -55px; left: auto; right: 15px;
+        }
+        .x1 {
+	        -webkit-animation: moveclouds 15s linear infinite;
+	        -moz-animation: moveclouds 15s linear infinite;
+	        -o-animation: moveclouds 15s linear infinite;
+        }
+        .x2 {
+	        left: 200px;
+	        -webkit-transform: scale(0.6);
+	        -moz-transform: scale(0.6);
+	        transform: scale(0.6);
+	        opacity: 0.6;
+	        -webkit-animation: moveclouds 25s linear infinite;
+	        -moz-animation: moveclouds 25s linear infinite;
+	        -o-animation: moveclouds 25s linear infinite;
+        }
+        .x3 {
+	        left: -250px; top: -200px;
+	        -webkit-transform: scale(0.8);
+	        -moz-transform: scale(0.8);
+	        transform: scale(0.8);
+	        opacity: 0.8;
+	        -webkit-animation: moveclouds 20s linear infinite;
+	        -moz-animation: moveclouds 20s linear infinite;
+	        -o-animation: moveclouds 20s linear infinite;
+        }
+        .x4 {
+	        left: 470px; top: -250px;
+	        -webkit-transform: scale(0.75);
+	        -moz-transform: scale(0.75);
+	        transform: scale(0.75);
+	        opacity: 0.75;
+	        -webkit-animation: moveclouds 18s linear infinite;
+	        -moz-animation: moveclouds 18s linear infinite;
+	        -o-animation: moveclouds 18s linear infinite;
+        }
+        .x5 {
+	        left: -150px; top: -150px;
+	        -webkit-transform: scale(0.8);
+	        -moz-transform: scale(0.8);
+	        transform: scale(0.8);
+	        opacity: 0.8;
+	        -webkit-animation: moveclouds 20s linear infinite;
+	        -moz-animation: moveclouds 20s linear infinite;
+	        -o-animation: moveclouds 20s linear infinite;
+        }
+@-webkit-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-moz-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+@-o-keyframes moveclouds {
+	0% {margin-left: 1000px;}
+	100% {margin-left: -1000px;}
+}
+    </style>
+</head>
+<body>
+    <div id="clouds">
+        <div id="pestanya1"></div>
+        <div id="pestanya2"></div>
+        <div id="pestanya3"></div>
+        <!--Pestanyes Laterals-->
+        <div id="pestanya4"></div>
+        <div id="pestanya5"></div>
+        <div id="pestanya6"></div>
+        <!--Pestanyes Abaix-->
+        <div id="pestanya7"></div>
+        <div id="pestanya8"></div>
+        <div id="pestanya9"></div>
+        <!--Núvols-->
+        <div class="cloud x1"></div>
+	    <div class="cloud x2"></div>
+	    <div class="cloud x3"></div>
+	    <div class="cloud x4"></div>
+	    <div class="cloud x5"></div>
+    </div>
+</body>
+</html>
