@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ombres</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+      }
+
+      h1 {
+        color: red;
+        font-family: "Bangers", cursive;
+        text-shadow: 4px 4px yellow;
+        font-size: 72pt;
+        background-color: blue;
+        width: 525px;
+        border: 2px solid black;
+        border-radius: 1px;
+        margin: 25px;
+        margin-top: 30px;
+        margin-left: 100px;
+      }
+      #ombra {
+        background-color: blue;
+        border: 2px solid black;
+        border-radius: 1px;
+        width: 525px;
+        height: 525px;
+        margin: 25px;
+        margin-left: 100px;
+      }
+      #ombra:hover {
+        cursor: pointer;
+        box-shadow: 10px 10px yellow;
+      }
+      #ombra p {
+        font-family: sans-serif;
+        padding: 15px;
+        font-style: italic;
+      }
+      #ombra img{
+          display: block;
+          margin: 0 auto;
+          margin-top: 50px;
+          width: 200px;
+          border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Títol Principal</h1>
+    <div id="ombra">
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque
+        perspiciatis vero laborum, amet debitis dolorem hic deleniti dolores,
+        eum veritatis consequuntur pariatur ex fugit adipisci maxime dicta culpa
+        temporibus. Magni.
+        <br>
+        <img src="https://i.pinimg.com/originals/99/95/8b/99958b7b93ac04e60c843050e8f01a28.jpg" alt="Homelander">
+      </p>
+    </div>
+  </body>
+</html>

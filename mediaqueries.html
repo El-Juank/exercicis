@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style type="text/css">
+      #container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .prod {
+        position: relative;
+        float: left;
+        width: 20%;
+        background-color: yellowgreen;
+        margin: 20px;
+        padding: 15px;
+        text-align: justify;
+      }
+      /* No va :'( */
+      @media screen and (max-width: 600px){
+        .prod{
+            width: 48%;
+        }
+      }
+      @media screen and (max-width: 200px){
+        .prod{
+            width: 98%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="prod">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum
+        asperiores dolore omnis placeat qui, nisi ex animi illo et deserunt,
+        neque quis corporis tenetur, dolores accusamus? Non doloribus odio
+        deleniti?
+      </div>
+      <div class="prod">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores vel sed
+        nobis praesentium impedit tempore necessitatibus, ipsam accusamus,
+        laborum, fugiat soluta? Accusamus asperiores illum aspernatur qui, hic
+        voluptates quam molestias?
+      </div>
+      <div class="prod">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident
+        neque officiis sit, accusantium doloribus quo soluta voluptates,
+        repudiandae earum asperiores, aperiam illum delectus. Laborum laudantium
+        temporibus a aut ipsum culpa?
+      </div>
+      <div class="prod">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quia
+        reiciendis consequatur necessitatibus rerum ipsam praesentium. Eius,
+        accusamus maxime. Quos, consequatur. Neque, ex. Quibusdam excepturi
+        autem veniam debitis sit blanditiis.
+      </div>
+      <div class="prod">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+        voluptates! Nam quo alias dolores quae mollitia vitae praesentium
+        veritatis repellat odio nemo, consequuntur vel voluptatum rerum at
+        doloribus quisquam.
+      </div>
+      <div class="prod">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam maiores
+        incidunt itaque, quae natus saepe amet ea perferendis dolorum architecto
+        quaerat voluptate exercitationem sunt culpa, omnis rerum nam ipsum.
+      </div>
+      <div class="prod">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, non
+        quidem omnis sint, blanditiis necessitatibus aliquid ipsum fugit,
+        adipisci perspiciatis nam expedita sed! Natus illo unde perspiciatis!
+        Obcaecati, et ratione.
+      </div>
+      <div class="prod">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, facere
+        ipsa repellendus repellat veritatis omnis ratione distinctio vitae
+        deserunt voluptas aliquam ipsum dolor qui, consequuntur magnam ea fuga
+        amet optio?
+      </div>
+    </div>
+  </body>
+</html>
