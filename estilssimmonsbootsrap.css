@@ -1,0 +1,376 @@
+@font-face {
+  font-family: titols;
+  src: url(font/MuseoCyrillic-700.otf);
+}
+
+@font-face {
+  font-family: cos;
+  src: url(font/MuseoSans-300.otf);
+}
+
+/*Header*/
+
+#header {
+  background-color: #003a70;
+}
+
+/*#header i{
+  color: #e6bb02;
+}*/
+
+.navbar-brand{
+  margin: 20px 0px;
+}
+
+#header .navbar-dark .navbar-nav .nav-link {
+  font-family: cos;
+  color: white;
+}
+
+#header li {
+  padding: 25px 18px 22px 18px;
+}
+
+.dropdown-menu {
+  padding: 30px;
+}
+
+.dropdown-item {
+  padding: 0px;
+  margin-bottom: 20px;
+  font-family: cos;
+  text-decoration: none;
+  color: #0a60b0;
+}
+
+.dropdown-item:hover {
+  text-decoration: underline;
+  color: #0a60b0;
+  background-color: white;
+}
+
+/*Breadcrumb*/
+
+#breadcrumb {
+  background-color: #e6f1fc;
+  font-family: cos;
+  font-size: 11pt;
+  margin-bottom: 60px;
+}
+
+.breadcrumb {
+  background-color: #e6f1fc;
+  margin-bottom: 0px;
+  padding: 30px 0px;
+}
+
+.breadcrumb-item.active {
+  color: black;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f105";
+  color: #00a881;
+  font-weight: 300;
+}
+
+/*Primer text*/
+
+#primertext{
+  padding-bottom: 60px;
+}
+
+#primertext h1{
+  font-family: titols;
+  margin-bottom: 30px;
+  font-size: 32pt;
+}
+
+#primertext p{
+  font-family: cos;
+  font-size: 18pt;
+  margin-right: 275px;
+}
+
+/*Graella de serveis*/
+
+#graellaserveis {
+  background-color: #007377;
+}
+
+.contingutgraella {
+  padding: 80px 0px;
+}
+
+.separacioetiqueta {
+  background-color: white;
+  margin: 15px 0px;
+  padding: 20px;
+}
+
+.etiqueta img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.etiqueta h3 {
+  font-family: titols;
+  font-size: 18px;
+}
+
+.etiqueta a {
+  text-decoration: none;
+  color: #0a60b0;
+}
+
+.etiqueta a:hover {
+  text-decoration: underline;
+}
+
+.etiqueta p {
+  line-height: 150%;
+  font-family: cos;
+  font-size: 11pt;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 750px) {
+  .hide {
+    display: none;
+  }
+}
+
+/*Info*/
+
+#info {
+  background-color: #00a881;
+  border-bottom: 8px solid #c7d6e5;
+}
+
+#info h2 {
+  padding-top: 100px;
+  padding-bottom: 13px;
+  color: white;
+  font-family: titols;
+  font-size: 30pt;
+  margin-bottom: 0px;
+}
+
+.botoinfo {
+  background-color: white;
+  border: 4px solid #c7d6e5;
+  color: #003a70;
+  font-family: titols;
+  text-align: center;
+  padding: 20px;
+  margin: 10px 0px;
+  transition: background-color 0.4s;
+}
+
+.botoinfo:hover {
+  background-color: #c7d6e5;
+  cursor: pointer;
+}
+
+.botonsinfo {
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 750px) {
+  .botonsinfo {
+    margin-bottom: 50px !important;
+  }
+  #info h2 {
+    font-size: 18pt;
+    padding-top: 50px;
+  }
+}
+
+/*Footer*/
+
+#footermenu1 {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-top: 60px;
+  margin-bottom: 60px;
+  font-size: 16pt;
+}
+
+#footermenu1 li {
+  padding: 12px 0px;
+}
+
+#footermenu1 i {
+  color: #00a881;
+}
+
+#footer a {
+  color: #0a60b0;
+  font-family: titols;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #003a70;
+}
+
+#footer ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#footerllista1 {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#footerllista1 h2 {
+  color: #007377;
+  font-family: titols;
+  font-size: 12pt;
+}
+
+#footerllista1 ul {
+  column-count: 3;
+}
+
+#footerllista1 li {
+  padding: 7px 0px;
+}
+
+#footerllista2 h2 {
+  color: #007377;
+  font-family: titols;
+  font-size: 12pt;
+}
+
+#footerllista2 li {
+  padding: 7px 0px;
+}
+
+#copyright {
+  font-size: 18px;
+  margin-top: 100px;
+}
+
+#copyright ul {
+  display: inline;
+}
+
+#copyright li:first-child {
+  font-family: cos;
+}
+
+#copyright li {
+  float: left;
+  padding: 0px 15px;
+  margin-bottom: 100px;
+}
+
+#lilinies {
+  border-right: 2px solid #00a881;
+  border-left: 2px solid #00a881;
+}
+
+.icones {
+  width: 50px;
+  float: left;
+  padding-right: 15px;
+}
+
+#footerinfo {
+  padding-top: 60px;
+  font-family: cos;
+}
+
+#footerinfo p {
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+#logosimmonsfooter {
+  margin-bottom: 50px;
+}
+
+#footerinfo i {
+  background-color: #00a881;
+  color: white;
+  display: block;
+  width: 42px;
+  height: 41px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 41px;
+  transition: all 0.3s ease-out;
+  float: left;
+  margin: 5px;
+}
+
+#footerinfo i:hover {
+  background-color: #002856;
+}
+
+#iconesfooter {
+  margin-top: 110px;
+}
+
+@media screen and (max-width: 1200px) {
+  #footermenu1 {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  #footerllista1 ul {
+    column-count: 2;
+  }
+
+  #footerllista2 {
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #footermenu1 {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+
+  #footerllista1 ul {
+    column-count: 1;
+  }
+  #footerllista1 {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+  }
+  #footerllista2 {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+  }
+  #copyright {
+    font-size: 18px;
+    margin-top: 0px;
+  }
+  #copyright ul {
+    display: block;
+  }
+  #copyright li {
+    float: none;
+    padding: 0px 10px;
+    margin-bottom: 5px;
+    font-size: 12pt;
+  }
+  #lilinies {
+    border-right: 0px solid #00a881;
+    border-left: 0px solid #00a881;
+  }
+  #iconesfooter {
+    margin-top: 0px;
+  }
+}
