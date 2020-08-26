@@ -13,6 +13,105 @@
   src: url(font/MuseoSans-900.ttf);
 }
 
+/*Header prova*/
+
+#header .col-4 img {
+  padding-top: 28px;
+}
+
+#columnabaix {
+  position: relative;
+  margin-top: -45px;
+  border-top: 2px solid #34618b;
+  left: 295px;
+  font-family: titols;
+}
+
+#columnabaix ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0px;
+}
+
+#columnabaix a {
+  color: white;
+  text-decoration: none;
+}
+
+#columnabaix li:hover {
+  background-color: #002856;
+  cursor: pointer;
+}
+
+#columnadalt {
+  padding: 0;
+  margin: 0;
+  width: 366px;
+  position: absolute;
+  top: 0;
+  right: 352px;
+  font-family: cos;
+  letter-spacing: 1.5px;
+}
+
+#columnadalt ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0px;
+  padding-top: 16px;
+}
+
+#columnadalt li {
+  /*padding: 25px 18px 22px 18px;*/
+}
+
+#columnadalt a {
+  color: white;
+  text-decoration: none;
+}
+
+#columnadalt a:hover {
+  border-bottom: 2px solid #e6bb02;
+}
+
+#columnadalt button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: cos;
+  letter-spacing: 1.5px;
+  line-height: 1;
+}
+#columnadalt button i {
+  color: #e6bb02;
+}
+
+#botoinfo {
+  width: 205px;
+}
+
+#botosearch {
+  width: 106px;
+}
+
+.botonsheader:hover {
+  background-color: #002856;
+}
+
+@media screen and (max-width: 1200px) {
+  #columnadalt{
+    display: none;
+  }
+  #columnabaix{
+    display: none;
+  }
+  #header .col-4 img {
+    padding-top: 0px;
+  }
+}
+
 /*Header*/
 
 #header {
@@ -384,16 +483,16 @@
 .quadredetext4 ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f111";
-  color: #7C2855;
+  color: #7c2855;
   font-weight: bold; /* If you want it to be bold */
   font-size: 8pt;
-  display: inline-block; /* Needed to add space between the bullet and the text */ 
+  display: inline-block; /* Needed to add space between the bullet and the text */
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
   padding-right: 40px;
 }
 
-.quadredetext4 li{
+.quadredetext4 li {
   margin-bottom: 15px;
 }
 
@@ -471,56 +570,56 @@
 }
 
 @media screen and (max-width: 750px) {
-  .quadredetext{
+  .quadredetext {
     width: auto;
     top: 0px;
   }
-  .imatge img{
+  .imatge img {
     position: relative;
   }
-  .imatge{
+  .imatge {
     margin-bottom: 50px;
   }
-  .quadredetext2{
+  .quadredetext2 {
     width: auto;
     top: 0px;
     left: 0px;
   }
-  .imatge2 img{
+  .imatge2 img {
     position: relative;
   }
-  .imatge2{
+  .imatge2 {
     margin-bottom: 50px;
   }
-  .quadredetext3{
+  .quadredetext3 {
     width: auto;
     top: 0px;
   }
-  .imatge3 img{
+  .imatge3 img {
     position: relative;
   }
-  .imatge3{
+  .imatge3 {
     margin-bottom: 50px;
   }
-  .quadredetext4{
+  .quadredetext4 {
     width: auto;
     top: 0px;
     left: 0px;
   }
-  .imatge4 img{
+  .imatge4 img {
     position: relative;
   }
-  .imatge4{
+  .imatge4 {
     margin-bottom: 50px;
   }
-  .quadredetext5{
+  .quadredetext5 {
     width: auto;
     top: 0px;
   }
-  .imatge5 img{
+  .imatge5 img {
     position: relative;
   }
-  .imatge5{
+  .imatge5 {
     margin-bottom: 50px;
   }
 }
@@ -638,14 +737,14 @@
 }
 
 @media screen and (max-width: 750px) {
-  .quadredetext6{
+  .quadredetext6 {
     width: auto;
     top: 0px;
   }
-  .imatge6 img{
+  .imatge6 img {
     position: relative;
   }
-  .imatge6{
+  .imatge6 {
     margin-bottom: 50px;
   }
 }

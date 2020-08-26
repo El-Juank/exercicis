@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Variables amb JavaScript</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="estels.css" />
+    <meta name="author" content="El Juank" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <style type="text/css">
+      img {
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+      .stage {
+        display: flex;
+        height: 300px;
+        width: 100%;
+      }
+      .box {
+        align-self: flex-end;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        height: 200px;
+        margin: 0 auto 0 auto;
+        transform-origin: bottom;
+        width: 200px;
+      }
+      .bounce-1 {
+        animation-name: bounce-1;
+        animation-timing-function: linear;
+      }
+      @keyframes bounce-1 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-100px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: rgba(1, 1, 1, 0);">
+    <div class="container">
+      <h2 style="color: white;">Contador:</h2>
+      <input type="button" value="Clicka'm" id="" onclick="contar()" />
+      <div class="stage">
+        <img
+          class="box bounce-1"
+          src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea196117-0b64-49b7-b13f-79f43cf77e53/ddls31c-9247bae6-b63b-4209-b3d3-df61ddb1bf67.png/v1/fill/w_894,h_894,strp/_baby_yoda___the_child_asset___1____png_by_captain_kingsman16_ddls31c-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xNzExIiwicGF0aCI6IlwvZlwvZWExOTYxMTctMGI2NC00OWI3LWIxM2YtNzlmNDNjZjc3ZTUzXC9kZGxzMzFjLTkyNDdiYWU2LWI2M2ItNDIwOS1iM2QzLWRmNjFkZGIxYmY2Ny5wbmciLCJ3aWR0aCI6Ijw9MTcxMSJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.cFlPC_P3tSdwY9ZH3lyP_UqJg3VUamkaM_DsMx55moE"
+          alt="Baby Yoda"
+        />
+      </div>
+    </div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <script language="javascript">
+      //Creem la funció
+      function contar() {
+        window.alert(quantitat);
+        //quantitat = quantitat + 1;
+        quantitat += 1; //És el mateix que adalt
+      }
+      //Creem la variable "quantitat"
+      var quantitat = 1;
+    </script>
+  </body>
+</html>

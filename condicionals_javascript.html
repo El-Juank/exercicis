@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Condicionals</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <style type="text/css">
+      body {
+        background-image: url(//www.toptal.com/designers/subtlepatterns/patterns/symphony.png);
+        background-position: bottom;
+        animation: 4s linear 0s infinite bp;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @keyframes bp {
+        from {
+          background-position: 198px 0;
+        }
+
+        to {
+          background-position: 0 198px;
+        }
+      }
+      .centered {
+        position: fixed;
+        top: 30%;
+        background-color: white;
+        padding: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      .footer{
+          position: absolute;
+          bottom: 10px;
+          color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered">
+      <h2>Comprova el teu mot de pas</h2>
+      <label>Mot de pas: </label>
+      <input type="password" placeholder="Escriu el teu mot de pas" id="text_password" />
+      <input type="button" value="Comprovar" onclick="comprovar()" />
+    </div>
+    <div class="footer">
+        <footer>&copy; Copyright 2020 El Juank</footer>
+    </div>
+    <script language="javascript">
+      function comprovar() {
+        var pass = document.getElementById("text_password").value;
+        if (pass == 123) {
+            window.alert("Mot de pass correcte!");
+        }
+        else if (pass != 123) {
+            window.alert("Mot de pass incorrecte!");
+        }
+      }
+    </script>
+  </body>
+</html>

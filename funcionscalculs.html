@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Funcions de càlculs</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <meta name="author" content="El Juank" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Funcions de càlculs</h1>
+      <!--<input type="button" value="Suma" onclick="sumar(3,5)" />
+    <input type="button" value="Resta" onclick="restar(10,2)" />
+    <input type="button" value="Multiplica" onclick="multiplicar(3,5)" />
+    <input type="button" value="Divideix" onclick="dividir(3,5)" />-->
+    <h2>Restar</h2>
+      Número 1: <input type="text" id="num1" name="Número 1" /> Número 2:
+      <input type="text" id="num2" name="Número 2" />
+      <input type="button" value="Calcula!" onclick="restar(document.getElementById('num1').value, document.getElementById('num2').value)"/>
+    </div>
+    <script language="javascript">
+      function sumar(num1, num2) {
+        window.alert(num1 + num2);
+      }
+      function restar(num1, num2) {
+        window.alert(num1 - num2);
+      }
+      function multiplicar(num1, num2) {
+        window.alert(num1 * num2);
+      }
+      function dividir(num1, num2) {
+        window.alert(num1 / num2);
+      }
+    </script>
+  </body>
+</html>

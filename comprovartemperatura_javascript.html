@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Condicionals</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <style type="text/css">
+      body {
+        background-image: url(//www.toptal.com/designers/subtlepatterns/patterns/symphony.png);
+        background-position: bottom;
+        animation: 4s linear 0s infinite bp;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      @keyframes bp {
+        from {
+          background-position: 198px 0;
+        }
+
+        to {
+          background-position: 0 198px;
+        }
+      }
+      .centered {
+        position: fixed;
+        top: 30%;
+        background-color: white;
+        padding: 50px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      .footer {
+        position: absolute;
+        bottom: 10px;
+        color: gray;
+      }
+      /*#resultat{
+          position: absolute;
+          bottom: 13%;
+          background-color: green;
+          height: 200px;
+          width: 200px;
+      }*/
+      #resultat img{
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered">
+      <h2>Comprova la temperatura</h2>
+      <label>Temperatura: </label>
+      <input type="text" placeholder="Escriu la temperatura" id="temp" />
+      <input type="button" value="Comprovar" onclick="comprovar()" />
+    </div>
+    <div id="resultat"></div>
+    <div class="footer">
+      <footer>&copy; Copyright 2020 El Juank</footer>
+    </div>
+    <script language="javascript">
+      function comprovar() {
+        var resultat = document.getElementById("resultat");
+        var temp = document.getElementById("temp").value;
+        if (temp <= 15) {
+          //window.alert("❄️ Fa fred! ❄️");
+          resultat.innerHTML="<img src='img/ninotdeneu.png'>";
+        } else if (temp < 25) {
+          //window.alert("S'està bé!");
+          resultat.innerHTML="<img src='img/sol.png'>"
+        } else if (temp >= 25) {
+          //window.alert("☀️ Fa calor! ☀️");
+          resultat.innerHTML="<img src='img/foc.png'>"
+        }
+      }
+    </script>
+  </body>
+</html>

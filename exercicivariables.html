@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Exercici variables</title>
+    <meta name="author" content="El Juank" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exercici variables</h1>
+      <input type="button" value="Resta!" onclick="restar()" />
+      <input type="button" value="Duplica!" onclick="duplicar()" />
+      <input type="button" value="Meitat!" onclick="meitat()" />
+    </div>
+    <script language="javascript">
+      //La variable
+      var quantitatResta = 10;
+      //La funció, en aquest cas restar
+      function restar() {
+        window.alert(quantitatResta);
+        quantitatResta -= 1;
+      }
+      //Variable
+      var quantitatDoble = 1;
+      //Funció
+      function duplicar() {
+        window.alert(quantitatDoble);
+        quantitatDoble *= 2;
+      }
+      //Variable
+      var quantitatMeitat = 1024
+      //Funció
+      function meitat(){
+          window.alert(quantitatMeitat);
+          quantitatMeitat /=2
+      }
+    </script>
+  </body>
+</html>

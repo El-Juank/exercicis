@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Mostrar la data</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <style type="text/css">
+      body {
+        transform: scale(2.5);
+        transform-origin: 0 0;
+      }
+      img {
+        width: 100px;
+      }
+      #cos {
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cos">
+      <h1>Botó màgic, mostra'm la data!</h1>
+      <img
+        src="https://i.kym-cdn.com/entries/icons/facebook/000/024/888/Screen_Shot_2017-12-12_at_12.10.40_PM.jpg"
+      />
+      <input type="button" value="Dona'm la data!" onclick="mostar_data()" />
+    </div>
+    <script language="javascript">
+      function mostar_data() {
+        var d = new Date();
+        //var dia = d.getDate();
+        //window.alert("Avui estem a dia "+dia);
+        //var mes = d.getMonth();
+        //window.alert("Avui estem a mes " + (mes + 1));
+        var any = d.getFullYear();
+        window.alert("Estem a l'any "+any);
+      }
+    </script>
+  </body>
+</html>

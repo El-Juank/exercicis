@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Exercici mostrar data</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Page Title</h1>
+      <input type="button" value="Dona'm la data!" onclick="mostradata()" />
+    </div>
+    <script language="javascript">
+      /*function mostradata() {
+        var avui = new Date();
+        var data =
+          avui.getDate() +
+          "/" +
+          (avui.getMonth() + 1) +
+          "/" +
+          avui.getFullYear();
+          var hora = avui.getHours() + ":" + avui.getMinutes() + ":" + avui.getSeconds();
+        window.alert("Data: "+data +"   Hora: "+hora);}*/
+
+        function mostradata() {
+        var mesos = [
+          "Gener",
+          "Febrer",
+          "Març",
+          "Abril",
+          "Maig",
+          "Juny",
+          "Juliol",
+          "Agost",
+          "Setembre",
+          "Octubre",
+          "Novembre",
+          "Desembre",
+        ];
+
+        var d = new Date();
+        var dia = d.getDate();
+        var hour = d.getHours();
+        var mins = d.getMinutes();
+        var sec = d.getSeconds();
+        var month = d.getMonth();
+        var year = d.getFullYear();
+        var time = hour + ":" + mins + ":" + sec;
+
+        window.alert(
+          "Avui és dia " +
+            dia +
+            " de " +
+            mesos[month] +
+            " de " +
+            year +
+            " i són les " +
+            time
+        );
+      }
+    </script>
+  </body>
+</html>
