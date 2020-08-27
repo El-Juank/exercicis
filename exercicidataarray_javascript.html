@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Mostrar la data mitjançant array</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script language="javascript">
+      function mostrarData() {
+        var d = new Date();
+        var dia = d.getDay();
+        var diames = d.getDate();
+        var mes = d.getMonth();
+        var any = d.getFullYear();
+        var mesos = [
+          "de Gener",
+          "de Febrer",
+          "de Març",
+          "d'Abril",
+          "de Maig",
+          "de Juny",
+          "de Juliol",
+          "d'Agost",
+          "de Septembre",
+          "de Octubre",
+          "de Novembre",
+          "de Desembre",
+        ];
+        var dies = [
+          "Diumenge",
+          "Dilluns",
+          "Dimarts",
+          "Dimecres",
+          "Dijous",
+          "Divendres",
+          "Dissabte",
+        ];
+        window.alert(
+          "Avui som " +
+            dies[dia] +
+            " " +
+            diames +
+            " " +
+            mesos[mes] +
+            " de " +
+            any
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="button" value="Dona'm la data" onclick="mostrarData()" />
+    </div>
+  </body>
+</html>

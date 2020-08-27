@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Can Mallet</title>
+    <!--Enllaços-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <link rel="stylesheet" href="exercicirestaurantestils.css" />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <script language="javascript">
+      function triarPrimer() {
+        var primers = [
+          "img/pollastre.jpg",
+          "img/amanida.jpg",
+          "img/gnocci.jpg",
+        ];
+        var primer = document.getElementById("primers").value;
+        var resultatPrimer = document.getElementById("resultatPrimer");
+        resultatPrimer.innerHTML = "<img src='" + primers[primer] + "'>";
+      }
+      function triarBeguda() {
+        var begudes = ["img/aigua.jpg", "img/beer.jpg", "img/cola.jpg"];
+        var beguda = document.getElementById("begudes").value;
+        var resultatBeguda = document.getElementById("resultatBeguda");
+        resultatBeguda.innerHTML = "<img src='" + begudes[beguda] + "'>";
+      }
+      function triarPostre() {
+        var postres = ["img/alfajores.jpg", "img/pastis.jpg", "img/batut.jpg"];
+        var postre = document.getElementById("postres").value;
+        var resultatPostres = document.getElementById("resultatPostres");
+        resultatPostres.innerHTML = "<img src='" + postres[postre] + "'>";
+      }
+      function refresh() {
+        window.alert("Moltes gràcies per la seva reserva");
+        location.reload();
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              id="sitelogo"
+              src="img/canmallet_logo.png"
+              alt="Logo de Can Mallet"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#nvbCollapse"
+            aria-controls="nvbCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="nvbCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item pl-1">
+                <a class="nav-link" href="#"
+                  ><i class="fa fa-home fa-fw mr-1"></i>Inici</a
+                >
+              </li>
+              <li class="nav-item active pl-1">
+                <a class="nav-link" href="#"
+                  ><i class="fa fa-th-list fa-fw mr-1"></i>Reserva</a
+                >
+              </li>
+              <li class="nav-item pl-1">
+                <a class="nav-link" href="#"
+                  ><i class="fa fa-info-circle fa-fw mr-1"></i>Nosaltres</a
+                >
+              </li>
+              <li class="nav-item pl-1">
+                <a class="nav-link" href="#"
+                  ><i class="fa fa-phone fa-fw fa-rotate-180 mr-1"></i
+                  >Contacte</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Fi del Header-->
+    <!-- Breadcrumb -->
+    <nav class="navegacio" aria-label="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Inici<a href="#"></a></li>
+          <li class="breadcrumb-item active" aria-current="page">Reserva</li>
+        </ol>
+      </div>
+    </nav>
+    <!-- Fi del Breadcrumb-->
+    <!-- Body -->
+    <div class="container">
+      <h1>Reserva</h1>
+      <h2>Trieu el vostre menú</h2>
+      <div class="row">
+        <div class="col-lg-4 menu">
+          <div>
+            <h3>Plats Principals</h3>
+            <select id="primers" onchange="triarPrimer()">
+              <option>Escull el primer plat</option>
+              <option value="0">Pollastre Rostit</option>
+              <option value="1">Amanida</option>
+              <option value="2">Ravioli</option>
+            </select>
+          </div>
+          <hr />
+          <div id="resultatPrimer"></div>
+        </div>
+        <div class="col-lg-4 menu">
+          <div>
+            <h3>Begudes</h3>
+            <select id="begudes" onchange="triarBeguda()">
+              <option>Escull la beguda</option>
+              <option value="0">Aigua d'Indonesia</option>
+              <option value="1">Cervesa</option>
+              <option value="2">Cocacola Zero (llauna)</option>
+            </select>
+          </div>
+          <hr />
+          <div id="resultatBeguda"></div>
+        </div>
+        <div class="col-lg-4 menu">
+          <div>
+            <h3>Postres</h3>
+            <select id="postres" onchange="triarPostre()">
+              <option>Escull els postres</option>
+              <option value="0">Alfajores</option>
+              <option value="1">Pastis de xocolata</option>
+              <option value="2">Batut de maduixa</option>
+            </select>
+          </div>
+          <hr />
+          <div id="resultatPostres"></div>
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-lg-8"></div>
+        <div class="col-lg-4">
+          <div id="botoreserva" class="float-right">
+            <button
+              type="button"
+              id="botoreservar"
+              class="btn"
+              onclick="refresh()"
+            >
+              FES LA TEVA RESERVA
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Fi del Body -->
+    <!--- Footer --->
+    <footer>
+      <div class="footer jumbotron jumbotron-fluid p-4 mt-5 mb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+              <div class="card border-0">
+                <div class="card-body text-light text-center">
+                  <h5 class="card-title display-4" style="font-size: 30px">
+                    Drets d'autor
+                  </h5>
+                  <p class="d-inline lead">Can Mallet © 2020<br /></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title display-4" style="font-size: 30px">
+                    Contacte
+                  </h5>
+                  <a
+                    class="text-light d-block lead"
+                    style="margin-left: -20px"
+                    href="#"
+                    ><i class="fa fa-phone mr-2"></i>+90 (000) 000 0 000</a
+                  >
+                  <a class="text-light d-block lead" href="#"
+                    ><i class="fa fa-envelope mr-2"></i>info@canmallet.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title display-4" style="font-size: 30px">
+                    Xarxes Socials
+                  </h5>
+
+                  <a class="text-light" href="#"
+                    ><i class="fab fa-facebook fa-fw fa-2x"></i
+                  ></a>
+
+                  <a class="text-light" href="#"
+                    ><i class="fab fa-twitter-square fa-fw fa-2x"></i
+                  ></a>
+
+                  <a class="text-light" href="#"
+                    ><i class="fab fa-instagram fa-fw fa-2x"></i
+                  ></a>
+
+                  <a class="text-light" href="#"
+                    ><i class="fab fa-linkedin fa-fw fa-2x"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fi del Footer -->
+  </body>
+</html>

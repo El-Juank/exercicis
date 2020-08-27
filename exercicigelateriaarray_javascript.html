@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Gelats Costa</title>
+    <!--Bootstrap & Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!--Links propis-->
+    <link rel="stylesheet" href="exercicigelateria.css" />
+    <script src="exercicigelateriaarray.js"></script>
+  </head>
+  <body>
+    <!--Header-->
+    <nav
+      id="topNav"
+      class="navbar fixed-to navbar-expand-lg navbar-dark bg-dark"
+    >
+      <a class="navbar-brand mx-auto" href="/">
+        <img class="" src="img/gelats/gelats_costa_logo.png" alt="logo/brand" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">Inici</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Gelats</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Nosaltres</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacte</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Serveis</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Fi del Header-->
+    <div class="container">
+      <h1>Fes el teu gelat!</h1>
+      <div class="row">
+        <div class="col-lg-3">
+          <h2>Gust</h2>
+          <select id="sabor" onchange="triarGelat()">
+            <option>Tria el gust</option>
+            <option value="0">Maduixa</option>
+            <option value="1">Llimona</option>
+            <option value="2">Xocolata</option>
+            <option value="3">Vainilla</option>
+          </select>
+        </div>
+        <div class="col-lg-3">
+          <h2>Tipus</h2>
+          <select id="tipus" onchange="triarGelat()">
+            <option>Tria el tipus</option>
+            <option value="0">Cucurutxo</option>
+            <option value="1">Tarrina</option>
+            <option value="2">Batut</option>
+          </select>
+        </div>
+        <div class="col-lg-3">
+          <h2>Mida</h2>
+          <select id="mida" onchange="triarGelat()">
+            <option>Tria la mida</option>
+            <option value="0">Petit</option>
+            <option value="1">Mitjà</option>
+            <option value="2">Gran</option>
+          </select>
+        </div>
+        <div class="col-lg-3">
+          <h2>Toppings</h2>
+          <select id="topping" onchange="triarGelat()">
+            <option>Tria el topping</option>
+            <option value="0">M&Ms</option>
+            <option value="1">Fideus de colors</option>
+            <option value="2">Fruita</option>
+          </select>
+        </div>
+      </div>
+      <div id="resultat"></div>
+    </div>
+  </body>
+</html>

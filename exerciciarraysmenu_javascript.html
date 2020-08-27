@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Menu amb arrays</title>
+    <meta name="author" content="El Juank" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script language="javascript">
+      function triarPlat() {
+        var plats = [
+          "img/alfajores.jpg",
+          "img/pancakes.jpg",
+          "img/milkshake.jpg",
+        ];
+        var plat = document.getElementById("plat").value;
+        var resultat = document.getElementById("resultat");
+        resultat.innerHTML = "<img src='"+plats[plat]+"'>";
+      }
+    </script>
+    <style type="text/css">
+        img{
+            width: 250px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <select id="plat" onchange="triarPlat()">
+        <option>Escull el plat</option>
+        <option value="0">Chili con carne</option>
+        <option value="1">Arepas</option>
+        <option value="2">Tacos</option>
+      </select>
+      <div id="resultat"></div>
+    </div>
+  </body>
+</html>

@@ -13,3 +13,9 @@
     top: 2%;
   }
 }
+
+.container img{
+  width: 1000px;
+  display: block;
+  margin: 0 auto;
+}
