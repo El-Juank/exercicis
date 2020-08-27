@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Botó crida una funció 2</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <script language="javascript">
+      function mostrar() {
+        var d = new Date();
+        var mes = d.getMonth();
+        if (mes == 6) {
+          window.alert("No seas impaciente, falta poco");
+        } else if (mes == 7) {
+          window.alert("¡Vacaciones!");
+        } else if (mess == 8) {
+          window.alert("Ya se te acabaron las vacaciones...");
+        } else{
+            window.alert("Aun te falta mucho");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="clicka'm" onclick="mostrar()" />
+  </body>
+</html>

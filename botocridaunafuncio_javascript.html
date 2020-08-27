@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Botó crida una funció</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <script language="javascript">
+      function comprovar() {
+        var d = new Date();
+        var mes = d.getMonth();
+        if (mes == 6) {
+          window.alert("Encara no són vacanses...");
+        } else {
+          if (mes == 7) {
+            window.alert("Són vacanses!");
+          } else {
+            window.alert("Ja han pasat les vacanses...");
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <input type="button" value="Comprovar vacanses" onclick="comprovar()" />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Mostra el dia de la setmana</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <script>
+      function mostrarDia() {
+        var d = new Date();
+        var dia = d.getDay();
+        switch (dia) {
+          case 0:
+            window.alert("Diumenge");
+            break;
+          case 1:
+            window.alert("Dilluns");
+            break;
+          case 2:
+            alertwindow.alert("Dimarts");
+            break;
+          case 3:
+            window.alert("Dimecres");
+            break;
+          case 4:
+            window.alert("Dijous");
+            break;
+          case 5:
+            window.alert("Divendres");
+            break;
+          case 6:
+            window.alert("Dissabte");
+            break;
+        /*case 0:
+          case 6:
+            window.alert("Cap de setmana");
+            break;
+          case default:
+            window.alert("Dies de setmana");
+            break;*/
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Quin dia és avui?</h1>
+      <h2>Pulsa el botó i ho descobriràs</h2>
+      <input type="button" value="Pulsa'm" onclick="mostrarDia()" />
+    </div>
+  </body>
+</html>

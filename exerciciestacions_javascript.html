@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Comprova l'estació</title>
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <script language="javascript">
+      function comprovaEstacio() {
+        var d = new Date();
+        var hora =d.getHours();
+        var dia =d.getDay();
+        var mes = d.getMonth();
+        if(((mes==11)&&(dia>=21))||(mes==0)||(mes==1)||((mes==2)&&(dia<=20))){
+            resultat.innerHTML = "<img src='img/ninotdeneu.png'>";
+        }
+        else if(((mes==2)&&(dia>=21))||(mes==3)||(mes==4)||((mes==5)&&(dia<=20))){
+            resultat.innerHTML = "<img src='img/primavera.png'>";
+        }
+        else if(((mes==5)&&(dia>=21))||(mes==6)||(mes==7)||((mes==8)&&(dia<=20))){
+            resultat.innerHTML = "<img src='img/estiu.png'>";
+        }
+        else if(((mes==8)&&(dia>=21))||(mes==9)||(mes==10)||((mes==11)&&(dia<=20))){
+            resultat.innerHTML = "<img src='img/tardor.png'>";
+        }
+      }
+    </script>
+    <style type="text/css">
+      img {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input
+        type="button"
+        value="Comprova l'estació"
+        onclick="comprovaEstacio()"
+      />
+      <div id="resultat"></div>
+    </div>
+  </body>
+</html>

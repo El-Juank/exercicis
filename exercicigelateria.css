@@ -1,0 +1,15 @@
+#topNav {
+  margin-bottom: 65px;
+}
+#topNav img {
+  width: 155px;
+}
+@media (min-width: 990px) {
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /**optional offset from top**/
+    top: 2%;
+  }
+}
