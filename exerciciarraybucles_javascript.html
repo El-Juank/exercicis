@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Matrius i bucles</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Tipografias-->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!--JavaScript-->
+    <script language="javascript">
+      function corretgir() {
+        var respostes = [
+          "el sol",
+          "de agujeros",
+          "el árbitro",
+          "una hora",
+          "todos",
+          "el abecedario",
+          "que no llueva",
+          "en Europa",
+          "el fémur",
+          "cuatro",
+        ];
+        var i = 0;
+        for (i = 0; i < respostes.length; i++) {
+          var capa = document.getElementById("capa" + i);
+          var resposta = document.getElementById("resposta" + i).value;
+          if (resposta == respostes[i]) {
+            //window.alert("Correcte!");
+            capa.innerHTML = "<img src='img/correcte.png'>";
+          } else if (resposta != respostes[i]) {
+            //window.alert("ERROR!");
+            capa.innerHTML = "<img src='img/incorrecte.png'>";
+          }
+        }
+      }
+    </script>
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: 'Balsamiq Sans', cursive;
+      }
+      img {
+        width: 35px;
+      }
+      #capa0,
+      #capa1,
+      #capa2,
+      #capa3,
+      #capa4,
+      #capa5,
+      #capa6,
+      #capa7,
+      #capa8,
+      #capa9 {
+        display: inline;
+        padding: 15px;
+      }
+      label {
+        padding: 15px;
+      }
+      h1{
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Examen</h1>
+      <label
+        >¿Qué es aquello que todo el mundo toma pero que nadie se lleva?</label
+      >
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta0" />
+      <div id="capa0"></div>
+      <br />
+      <label>¿De qué se puede llenar un cubo vacío?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta1" />
+      <div id="capa1"></div>
+      <br />
+      <label>¿Quién es el único que no pierde en un partido de fútbol?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta2" />
+      <div id="capa2"></div>
+      <br />
+      <label>¿Qué pasó ayer en Murcia de 6 a 7?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta3" />
+      <div id="capa3"></div>
+      <br />
+      <label>¿Cuántos meses del año tienen 28 días?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta4" />
+      <div id="capa4"></div>
+      <br />
+      <label>¿Cuál es el ave con más letras?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta5" />
+      <div id="capa5"></div>
+      <br />
+      <label>
+        ¿Qué hace falta para que cinco personas con un solo paraguas no se
+        mojen?
+      </label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta6" />
+      <div id="capa6"></div>
+      <br />
+      <label>¿En qué continente están Roma y París?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta7" />
+      <div id="capa7"></div>
+      <br />
+      <label>¿Cuál es el hueso más largo del cuerpo humano?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta8" />
+      <div id="capa8"></div>
+      <br />
+      <label>¿Cuántas estaciones tiene un año?</label>
+      <input type="text" placeholder="Escribe tu respuesta" id="resposta9" />
+      <div id="capa9"></div>
+      <br />
+      <input type="button" value="Corrige" onclick="corretgir()" />
+    </div>
+  </body>
+</html>

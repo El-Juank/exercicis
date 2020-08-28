@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Matrius i bucles</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--JavaScript-->
+    <script language="javascript">
+      function mostraImatges() {
+        var fotos = [
+          "img/ninotdeneu.png",
+          "img/scooter.png",
+          "img/primavera.png",
+        ];
+        var i = 0;
+        for (i = 0; i < fotos.length; i++) {
+          var capa = document.getElementById("capa"+i);
+          capa.innerHTML = "<img src='" + fotos[i] + "'/>";
+        }
+      }
+    </script>
+    <!--Estils-->
+    <style type="text/css">
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input type="button" value="Clicka'm" onclick="mostraImatges()" />
+      <div id="capa0"></div>
+      <div id="capa1"></div>
+      <div id="capa2"></div>
+    </div>
+  </body>
+</html>

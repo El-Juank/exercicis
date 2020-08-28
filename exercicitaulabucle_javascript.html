@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Taules de multiplicar</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      h1 {
+        font-family: "Londrina Solid", cursive;
+        text-decoration: underline;
+      }
+      img {
+        width: 100px;
+        margin-bottom: 15px;
+        margin-right: -15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Taules de multiplicar</h1>
+      <img
+        src="https://i.kym-cdn.com/photos/images/original/001/199/634/7bd.png"
+      />
+      <input id="text_numero" type="text" placeholder="Escriu el número" />
+      <input type="button" value="Fes la taula!" onclick="ferTaula()" />
+      <script language="javascript">
+        function ferTaula() {
+          var numero = document.getElementById("text_numero").value;
+          var i = 0;
+          document.write("<table width='600' border='1'>");
+          for (i = 0; i < 11; i++) {
+            document.write("<tr><td>" + i + "</td>");
+            document.write("<td>" + numero + "</td>");
+            document.write("<td>" + i * numero + "</td></tr>");
+          }
+          document.write("</table>");
+        }
+      </script>
+    </div>
+  </body>
+</html>

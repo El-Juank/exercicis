@@ -17,37 +17,30 @@
       crossorigin="anonymous"
     />
     <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <!--Links propis-->
     <link rel="stylesheet" href="exercicigelateria.css" />
     <script src="exercicigelateriaarray.js"></script>
   </head>
   <body>
     <!--Header-->
-    <nav
-      id="topNav"
-      class="navbar fixed-to navbar-expand-lg navbar-dark bg-dark"
-    >
+    <nav id="topNav" class="navbar fixed-to navbar-expand-lg sticky">
       <a class="navbar-brand mx-auto" href="/">
         <img class="" src="img/gelats/gelats_costa_logo.png" alt="logo/brand" />
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target=".navbar-collapse"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
       <div class="navbar-collapse collapse">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#">Inici</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Gelats</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Inici</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Gelats</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Fes el teu gelat</a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item"><a class="nav-link" href="#">Nosaltres</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Contacte</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Serveis</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Nosaltres</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Contacte</a></li>
+          <li class="nav-item"><a class="nav-link" href="">Serveis</a></li>
         </ul>
       </div>
     </nav>
@@ -55,7 +48,7 @@
     <div class="container">
       <h1>Fes el teu gelat!</h1>
       <div class="row">
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-sm-6 col-xs-6">
           <h2>Gust</h2>
           <select id="sabor" onchange="triarGelat()">
             <option>Tria el gust</option>
@@ -65,7 +58,7 @@
             <option value="3">Vainilla</option>
           </select>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-sm-6 col-xs-6">
           <h2>Tipus</h2>
           <select id="tipus" onchange="triarGelat()">
             <option>Tria el tipus</option>
@@ -74,7 +67,7 @@
             <option value="2">Batut</option>
           </select>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-sm-6 col-xs-6">
           <h2>Mida</h2>
           <select id="mida" onchange="triarGelat()">
             <option>Tria la mida</option>
@@ -83,7 +76,7 @@
             <option value="2">Gran</option>
           </select>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 col-sm-6 col-xs-6">
           <h2>Toppings</h2>
           <select id="topping" onchange="triarGelat()">
             <option>Tria el topping</option>
@@ -94,6 +87,77 @@
         </div>
       </div>
       <div id="resultat"></div>
+      <div class="container boto">
+        <div id="botoreserva" class="d-flex justify-content-center">
+            <button type="button" id="botoreservar" class="btn" onclick="refresh()">
+              FES LA TEVA RESERVA
+            </button>
+          </div>
+      </div>
     </div>
+    <!--- Footer --->
+    <footer>
+      <div class="footer jumbotron jumbotron-fluid p-4 mt-5 mb-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi linia">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title display-4" style="font-size: 30px">
+                    Adreça
+                  </h5>
+                  <p class="d-inline lead">
+                    Passeig de la Devesa, 34,<br />Girona
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi linia">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title display-4" style="font-size: 30px">
+                    Contacte
+                  </h5>
+                  <a class="d-block lead" style="margin-left: -20px" href="#"
+                    ><i class="fa fa-phone mr-2"></i>+90 (000) 000 0 000</a
+                  >
+                  <a class="d-block lead" href="#"
+                    ><i class="fa fa-envelope mr-2"></i>info@gelatscosta.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+              <div class="card border-0">
+                <div class="card-body text-center">
+                  <h5 class="card-title display-4" style="font-size: 30px">
+                    Xarxes Socials
+                  </h5>
+
+                  <a class="" href="#"
+                    ><i class="fab fa-facebook fa-fw fa-2x"></i
+                  ></a>
+
+                  <a class="" href="#"
+                    ><i class="fab fa-twitter-square fa-fw fa-2x"></i
+                  ></a>
+
+                  <a class="" href="#"
+                    ><i class="fab fa-instagram fa-fw fa-2x"></i
+                  ></a>
+
+                  <a class="" href="#"
+                    ><i class="fab fa-linkedin fa-fw fa-2x"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Fi del Footer -->
   </body>
 </html>
