@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Matrius i bucles 2</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Tipografias-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--JavaScript-->
+    <script language="javascript">
+      function corretgir() {
+        var i = 0;
+        for (var i = 0; i < 11; i++) { //Es necesario un for/bucle para buscar los grupos y las capas donde haremos el innerHTML
+          var resposta = document.getElementsByName("grup" + i);
+          var capa = document.getElementById("capa" + i);
+          for (var j = 0; j < resposta.length; j++) { //Hacemos otro for/bucle, esta vez con la variable "j" para no repetir la variable "i" de antes para buscar las respuestas de los inputs radio
+            var radio = resposta[j];
+            if (radio.value == "correcte" && radio.checked) { //si el input radio selecionado y tiene el value "correcto" ...
+              capa.innerHTML = "<img src='img/correcte.png'>";
+            } else if (radio.value != "correcte" && radio.checked) {
+              capa.innerHTML = "<img src='img/incorrecte.png'>";
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      #capa0,
+      #capa1,
+      #capa2,
+      #capa3,
+      #capa4,
+      #capa5,
+      #capa6,
+      #capa7,
+      #capa8,
+      #capa9 {
+        display: inline;
+      }
+      img {
+        width: 35px;
+      }
+      h1 {
+        font-weight: 700;
+      }
+      li {
+        list-style-type: none;
+        font-size: 14pt;
+      }
+      input {
+        margin-top: 5px;
+        margin-bottom: 25px;
+        margin-left: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Examen</h1>
+      <form
+        name="quiz"
+        method="post"
+        name="buttons"
+        id="quiz"
+        onsubmit="return false"
+      >
+        <li><div class="question">¿2+2?</div></li>
+        <input id="answer" type="radio" name="grup1" value="incorrecte" /> 3
+        <input id="answer" type="radio" name="grup1" value="incorrecte" /> 5
+        <input id="answer" type="radio" name="grup1" value="correcte" /> 4
+        <div id="capa1"></div>
+        <li><div class="question">¿2+3?</div></li>
+        <input id="answer" type="radio" name="grup2" value="incorrecte" /> 4
+        <input id="answer" type="radio" name="grup2" value="correcte" /> 5
+        <input id="answer" type="radio" name="grup2" value="incorrecte" /> 6
+        <div id="capa2"></div>
+        <li><div class="question">¿3+3?</div></li>
+        <input id="answer" type="radio" name="grup3" value="incorrecte" />7
+        <input id="answer" type="radio" name="grup3" value="incorrecte" />5
+        <input id="answer" type="radio" name="grup3" value="correcte" />6
+        <div id="capa3"></div>
+        <br />
+        <button class="submit" onclick="corretgir();" type="submit">
+          Corrige
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
