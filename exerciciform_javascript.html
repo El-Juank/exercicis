@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica JavaScript</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      .container {
+        margin-left: 90px;
+      }
+    </style>
+    <script language="javascript">
+      function comprovar() {
+        var text_nom = document.getElementById("text_nom").value;
+        var text_correu = document.getElementById("text_correu").value;
+        var text_pass = document.getElementById("text_pass").value;
+        var formulari = document.getElementById("formulari");
+        var has_errors = false; //Per fer un boolean amb l'atribut false
+        if (text_nom == "") {
+          window.alert("Eps! Possa el teu nom!");
+          has_errors = true; //Si el nom està buit l'atribut del boolean es posa a true
+        } else if (text_nom.length < 3) {
+          window.alert("Quin nom més curt, no?");
+          has_errors = true; //Si el nom té menys de 3 caràcters l'atribut del boolean es posa a true
+        }
+        if (text_correu == "") {
+          window.alert("Eps! Possa el teu correu electrònic!");
+          has_errors = true; //Si el correu està buit l'atribut del boolean es posa a true
+        } else if (
+          text_correu.indexOf("@") == -1 ||
+          text_correu.indexOf("@") < 2
+        ) {
+          //Si el correu no té cap @ donarà error
+          window.alert("Correu electrònic invàlid!");
+          has_errors = true;
+        }
+        if (text_pass.trim() == "") {
+          window.alert("Eps! Possa el teu mot de pas!");
+          has_errors = true;
+        } else if (text_pass.trim() != "pepito") {
+          window.alert("Mot de pas incorrecte!");
+          has_errors = true;
+        }
+        if (has_errors == false) {
+          //També podria ser if (!has_error)
+          //Per poder enviar el formulari és necesàri que el boolean estigui en false
+          formulari.submit();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-decoration: underline">Formulari</h1>
+      <form method="POST" id="formulari">
+        <label for="text_nom">Nom(*):</label>
+        <input
+          type="text"
+          placeholder="Escriu el teu nom"
+          name="nom"
+          id="text_nom"
+          size="13"
+        />
+        <br />
+        <label for="text_correu">Correu electrònic(*):</label>
+        <input
+          type="text"
+          placeholder="Escriu el teu correu electrónic"
+          name="correu"
+          id="text_correu"
+          size="22"
+        />
+        <br />
+        <label for="text_pass">Mot de pas(*):</label>
+        <input
+          type="password"
+          placeholder="Escriu el teu mot de pas"
+          name="motdepas"
+          id="text_pass"
+          size="18"
+        />
+        <br />
+        <input type="button" value="Envia" onclick="comprovar()" />
+      </form>
+      <br />
+      <p>Els camps marcats amb (*) són obligatoris</p>
+      <img
+        style="width: 50px; position: absolute; left: 15px; top: 55px"
+        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/572d2149-3f08-4ebf-bd41-470663731799/d8n4fy1-1494b289-cc67-4248-a6e4-fd33780fb8e9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTcyZDIxNDktM2YwOC00ZWJmLWJkNDEtNDcwNjYzNzMxNzk5XC9kOG40ZnkxLTE0OTRiMjg5LWNjNjctNDI0OC1hNmU0LWZkMzM3ODBmYjhlOS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.DcZTnzv8jgeWup5tthNHQj0h44J8yyNTpw4Ypb4mhbc"
+      />
+    </div>
+  </body>
+</html>
