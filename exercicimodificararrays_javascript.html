@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica JavaScript</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      .container{
+          margin-left: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <script language="javascript">
+      /*function afegir() {
+        var resultat = document.getElementById("resultat");
+        var jugador = document.getElementById("nomJugador").value;
+        var jugadors = [""];
+        var i = 0;
+        jugadors.push(jugador);
+        for (i = 0; i < jugadors.length; i++) {
+          resultat.innerHTML += jugadors[i] + "<br>";
+        }
+      }*/
+      var jugadors = [""];
+      function afegir() {
+        var resultat = document.getElementById("resultat");
+        var jugador = document.getElementById("nomJugador").value;
+        jugadors.push(jugador);
+        var i = 0;
+        resultat.innerHTML = "";
+        for (i = 0; i < jugadors.length; i++) {
+            resultat.innerHTML+=jugadors[i]+"<br>";
+        }
+
+      }
+    </script>
+    <div class="container">
+      <h1>Llistat de jugadors</h1>
+      <label>Jugador:</label>
+      <input
+        type="text"
+        placeholder="Introduiex el nom del jugador"
+        id="nomJugador"
+      />
+      <input type="button" value="Afegir" onclick="afegir()" />
+      <div id="resultat"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica JavaScript</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <script language="javascript">
+      function duplicar() {
+        var num1 = 1;
+        var numero = document.getElementById("numero").value;
+        var i = 0;
+        var resultat = document.getElementById("resultat");
+        while (i < numero && num1 < 40000) {
+          num1 = num1 * 2;
+          i++;
+          resultat.innerHTML += num1 + "<br>";
+          //document.write(num1 + "<br>");
+        }
+      }
+      function factoritzar(){
+        var 
+      }
+    </script>
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>Dobles</h1>
+          <label>Número:</label>
+          <input type="text" placeholder="Escriu el número" id="numero" />
+          <input type="button" value="Multiplica!" onclick="duplicar()" />
+          <div id="resultat"></div>
+        </div>
+        <div class="col-6">
+          <h1>Factorials</h1>
+          <label>Número:</label>
+          <input
+            type="text"
+            placeholder="Escriu el número"
+            id="numerofactorial"
+          />
+          <input type="button" value="Factoritza!" onclick="factoritzar()" />
+          <div id="resultatfactorial"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

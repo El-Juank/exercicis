@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="author" content="El Juank" />
-    <title>Matrius i bucles 2</title>
+    <title>Examen tipo test</title>
     <link
       rel="icon"
       type="image/png"
@@ -35,7 +35,7 @@
           var capa = document.getElementById("capa" + i);
           for (var j = 0; j < resposta.length; j++) { //Hacemos otro for/bucle, esta vez con la variable "j" para no repetir la variable "i" de antes para buscar las respuestas de los inputs radio
             var radio = resposta[j];
-            if (radio.value == "correcte" && radio.checked) { //si el input radio selecionado y tiene el value "correcto" ...
+            if (radio.value == "correcte" && radio.checked) { //Si el input radio está selecionado y tiene el value "correcto" ...
               capa.innerHTML = "<img src='img/correcte.png'>";
             } else if (radio.value != "correcte" && radio.checked) {
               capa.innerHTML = "<img src='img/incorrecte.png'>";
@@ -94,20 +94,19 @@
         name="quiz"
         method="post"
         name="buttons"
-        id="quiz"
         onsubmit="return false"
       >
-        <li><div class="question">¿2+2?</div></li>
+        <li><div>¿2+2?</div></li>
         <input id="answer" type="radio" name="grup1" value="incorrecte" /> 3
         <input id="answer" type="radio" name="grup1" value="incorrecte" /> 5
         <input id="answer" type="radio" name="grup1" value="correcte" /> 4
         <div id="capa1"></div>
-        <li><div class="question">¿2+3?</div></li>
+        <li><div>¿2+3?</div></li>
         <input id="answer" type="radio" name="grup2" value="incorrecte" /> 4
         <input id="answer" type="radio" name="grup2" value="correcte" /> 5
         <input id="answer" type="radio" name="grup2" value="incorrecte" /> 6
         <div id="capa2"></div>
-        <li><div class="question">¿3+3?</div></li>
+        <li><div>¿3+3?</div></li>
         <input id="answer" type="radio" name="grup3" value="incorrecte" />7
         <input id="answer" type="radio" name="grup3" value="incorrecte" />5
         <input id="answer" type="radio" name="grup3" value="correcte" />6
