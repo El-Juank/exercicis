@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica jQuery</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estil-->
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      .container {
+        margin-left: 90px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input id="boto1" type="button" value="click" />
+      <input id="boto2" type="button" value="click" />
+      <input id="boto3" type="button" value="click" />
+      <input id="boto4" type="button" value="click" />
+      <div
+        id="capa1"
+        style="
+          width: 300px;
+          height: 300px;
+          display: none;
+          position: absolute;
+          left: 100px;
+          background-color: red;
+        "
+      ></div>
+      <div
+        id="capa2"
+        style="
+          width: 300px;
+          height: 300px;
+          display: none;
+          position: absolute;
+          left: 400px;
+          background-color: blue;
+        "
+      ></div>
+      <div
+        id="capa3"
+        style="
+          width: 300px;
+          height: 300px;
+          display: none;
+          position: absolute;
+          left: 700px;
+          background-color: yellow;
+        "
+      ></div>
+      <div
+        id="capa4"
+        style="
+          width: 300px;
+          height: 300px;
+          display: none;
+          position: absolute;
+          left: 1000px;
+          background-color: green;
+        "
+      ></div>
+    </div>
+    <script language="javascript">
+      $(document).ready(function () {
+        var has_error = false;
+        $("#boto1").click(function () {
+          $("#capa1").slideToggle();
+          $("#capa4").slideDown();
+        });
+        $("#boto2").click(function () {
+          $("#capa1").slideDown();
+          $("#capa2").slideToggle();
+        });
+        $("#boto3").click(function () {
+          $("#capa3").slideToggle();
+          $("#capa2").slideDown();
+        });
+        $("#boto4").click(function () {
+          $("#capa4").slideToggle();
+          $("#capa3").slideDown();
+        });
+        if ($("#capa1").is(":hidden")) {
+          window.alert("Troba els quadrats!");
+        } else if ($("#capa1").is(":visible")){
+            console.log("Es visible");
+        }
+      });
+    </script>
+  </body>
+</html>
