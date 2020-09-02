@@ -11,8 +11,7 @@
     <title>Pràctica jQuery</title>
     <link
       rel="icon"
-      type="image/png"
-      href="https://valeriabe.github.io/Portafolio/img/javascript.png"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
     />
     <!--Bootstrap CSS-->
     <link
@@ -57,7 +56,6 @@
       <label for="text_nom">Nom: </label>
       <input id="text_nom" type="text" placeholder="Escriu el teu nom" />
       <div id="capa1">
-        <h1>Hola</h1>
       </div>
       <input id="boto1" type="button" value="click" />
     </div>
@@ -68,7 +66,7 @@
             //window.alert($("#text_nom").val());
             //$("#text_nom").val("Miquel");
             //window.alert($("#capa1").html());
-            $("#capa1").html("<h2>Hola</h2>")
+            $("#capa1").html("<h1>"+text_nom+"</h1>")
         })
       });
     </script>

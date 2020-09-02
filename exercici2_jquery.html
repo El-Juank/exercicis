@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica jQuery</title>
+    <link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estils-->
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      .container {
+        margin-left: 90px;
+      }
+      input {
+        border: 2px solid black;
+        border-radius: 3px;
+        background-color: #fff;
+      }
+      input:active {
+        color: gray;
+      }
+      input[type="button"]:active,
+      input[type="submit"]:active,
+      input[type="reset"]:active {
+        color: white;
+        background-color: black;
+      }
+      img {
+        max-width: 300px;
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3);
+      }
+      .thumbnail {
+        width: 50px;
+        height: auto;
+        margin: 15px 29px 15px 0px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Increíbles fotos galácticas</h1>
+      <img
+        id="fotogran"
+        src="https://media.istockphoto.com/photos/unicorn-nebula-background-picture-id925756492?k=6&m=925756492&s=612x612&w=0&h=8LdzL2vDf5CQA_FCKmo4N2h37ijB_iuoJr87VkdM3BA="
+        alt=""
+      />
+      <br />
+      <img
+        id="foto1"
+        class="thumbnail"
+        src="https://media.istockphoto.com/photos/unicorn-nebula-background-picture-id925756492?k=6&m=925756492&s=612x612&w=0&h=8LdzL2vDf5CQA_FCKmo4N2h37ijB_iuoJr87VkdM3BA="
+        style="border: 3px solid black"
+      />
+      <img
+        id="foto2"
+        class="thumbnail"
+        src="https://st.depositphotos.com/1757583/3326/i/450/depositphotos_33266691-stock-photo-deep-outer-space.jpg"
+      />
+      <img
+        id="foto3"
+        class="thumbnail"
+        src="https://ctl.s6img.com/society6/img/hTzI43NAyzR2hyf9EW9d-9hRjeQ/w_700/duvet-covers/swatch/~artwork,fw_6000,fh_6000,iw_6000,ih_6000/s6-original-art-uploads/society6/uploads/misc/4f825e134dd84b9baf6efe871e6ba33d/~~/sloth-galaxy-duvet-covers.jpg"
+      />
+      <img
+        id="foto4"
+        class="thumbnail"
+        src="https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/99/EP4478-CUSA02688_00-2018102314300002/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+      />
+      <p>¡Elige tu favorita!</p>
+    </div>
+    <script language="javascript">
+      $(function () {
+        $("#foto1").click(function () {
+          $("#fotogran").attr(
+            "src",
+            "https://media.istockphoto.com/photos/unicorn-nebula-background-picture-id925756492?k=6&m=925756492&s=612x612&w=0&h=8LdzL2vDf5CQA_FCKmo4N2h37ijB_iuoJr87VkdM3BA="
+          );
+          $("#foto1").css("border", "3px solid black");
+          $("#foto2, #foto3, #foto4").css("border", "0px solid black");
+        });
+        $("#foto2").click(function () {
+          $("#fotogran").attr(
+            "src",
+            "https://st.depositphotos.com/1757583/3326/i/450/depositphotos_33266691-stock-photo-deep-outer-space.jpg"
+          );
+          $("#foto2").css("border", "3px solid black");
+          $("#foto1, #foto3, #foto4").css("border", "0px solid black");
+        });
+        $("#foto3").click(function () {
+          $("#fotogran").attr(
+            "src",
+            "https://ctl.s6img.com/society6/img/hTzI43NAyzR2hyf9EW9d-9hRjeQ/w_700/duvet-covers/swatch/~artwork,fw_6000,fh_6000,iw_6000,ih_6000/s6-original-art-uploads/society6/uploads/misc/4f825e134dd84b9baf6efe871e6ba33d/~~/sloth-galaxy-duvet-covers.jpg"
+          );
+          $("#foto3").css("border", "3px solid black");
+          $("#foto1, #foto2, #foto4").css("border", "0px solid black");
+        });
+        $("#foto4").click(function () {
+          $("#fotogran").attr(
+            "src",
+            "https://store.playstation.com/store/api/chihiro/00_09_000/container/ES/es/99/EP4478-CUSA02688_00-2018102314300002/0/image?_version=00_09_000&platform=chihiro&bg_color=000000&opacity=100&w=720&h=720"
+          );
+          $("#foto4").css("border", "3px solid black");
+          $("#foto1, #foto2, #foto3").css("border", "0px solid black");
+        });
+      });
+    </script>
+  </body>
+</html>

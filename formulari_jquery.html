@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica jQuery</title>
+    <link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estils-->
+    <style type="text/css">
+      body {
+        background-color: #fff;
+        background-image: linear-gradient(
+            90deg,
+            transparent 79px,
+            #abced4 79px,
+            #abced4 81px,
+            transparent 81px
+          ),
+          linear-gradient(#eee 0.1em, transparent 0.1em);
+        background-size: 100% 1.2em;
+        font-family: "Balsamiq Sans", cursive;
+      }
+      .container {
+        margin-left: 90px;
+      }
+      input {
+        border: 2px solid black;
+        border-radius: 3px;
+        background-color: #fff;
+      }
+      input:active {
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Formulari</h1>
+      <form>
+        <label for="text_nom">Nom(*):</label>
+        <input
+          id="text_nom"
+          type="text"
+          placeholder="Escriu el teu nom"
+          name="nom"
+          size="20"
+          class="inputs"
+        />
+        <br />
+        <label for="text_email">Email(*):</label>
+        <input
+          id="text_email"
+          type="email"
+          placeholder="Escriu el teu email"
+          name="email"
+          size="20"
+          class="inputs"
+        />
+        <br />
+        <label for="text_telf">Telèfon(*):</label>
+        <input
+          id="text_telf"
+          type="tel"
+          placeholder="Escriu el teu telèfon"
+          name="telf"
+          size="20"
+          class="inputs"
+        />
+        <br />
+        <label for="text_comentaris">Comentaris:</label>
+        <br />
+        <textarea
+          id="text_comentaris"
+          placeholder="Escriu els teus comentaris"
+          cols="50"
+          rows="10"
+          name="comentaris"
+          style="border: 2px solid black; border-radius: 3px;"
+        ></textarea>
+        <br />
+        <input id="boto_enviar" type="button" value="Envia" />
+        <p style="padding-top: 12px">Els camps amb (*) són obligatoris</p>
+      </form>
+    </div>
+    <script language="javascript">
+      $(function () {
+        $("#boto_enviar").click(function () {
+          if ($("#text_nom").val() == "") {
+            //window.alert("Has de possar el nom!");
+            $("#text_nom").css("border", "2px solid #ff4033");
+            $("#text_nom").attr("placeholder", "Escriu el teu maleït nom");
+          }
+          if ($("#text_email").val() == "") {
+            //window.alert("Has de possar el email!");
+            $("#text_email").css("border", "2px solid #ff4033");
+            $("#text_email").attr("placeholder", "Escriu el teu maleït email");
+          }
+          if ($("#text_telf").val() == "") {
+            //window.alert("Has de possar el telèfon!");
+            $("#text_telf").css("border", "2px solid #ff4033");
+            $("#text_telf").attr("placeholder", "Escriu el teu maleït telèfon");
+          }
+        });
+        $(".inputs").focus(function () {
+          $(this).css("border", "2px solid black");
+        });
+        $("#text_nom").focus(function () {
+            $("#text_nom").attr("placeholder", "Escriu el teu nom");
+        });
+        $("#text_email").focus(function () {
+            $("#text_email").attr("placeholder", "Escriu el teu email");
+        });
+        $("#text_telf").focus(function () {
+            $("#text_telf").attr("placeholder", "Escriu el teu telèfon");
+        });
+      });
+    </script>
+  </body>
+</html>

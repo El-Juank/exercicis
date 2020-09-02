@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica jQuery</title>
+    <link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estils-->
+    <style type="text/css">
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      input {
+        border: 1px solid black;
+        background-color: #fff;
+        margin: 15px 0px;
+      }
+      input:active {
+        color: gray;
+      }
+      #logo {
+        background-color: #f5f5f5;
+      }
+      #logo img {
+        height: 50px;
+        margin: 5px;
+      }
+      #foto img {
+        width: 500px;
+        display: block;
+        margin: 30px auto;
+      }
+      #bannerhead {
+        background-color: #e2dad7;
+        text-align: center;
+        margin: 20px;
+      }
+      #bannerhead img {
+        max-width: 600px;
+        max-height: 277px;
+        display: inline !important;
+      }
+      #bannerfooter {
+        background-color: #027924;
+        display: block;
+        text-align: center !important;
+        margin: 20px;
+      }
+      #bannerfooter img {
+        max-width: 600px;
+        display: inline !important;
+      }
+      @media (max-width: 600px) {
+        #bannerfooter img {
+          max-width: 400px;
+        }
+        #bannerhead img {
+          max-width: 400px;
+        }
+      }
+      input {
+        font-size: 10pt;
+        padding: 5px 20px;
+      }
+      input:hover {
+        background-color: #433f3b;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="logo">
+      <a href="">
+        <img
+          src="https://www.elcorteingles.es/recursos/informacioncorporativa/doc/portal/2017/07/06/eci-letras.png"
+          alt="Logo Corte Inglés"
+        />
+      </a>
+    </div>
+    <a href="">
+      <div id="bannerhead">
+        <img
+          src="https://www.elcorteingles.es/sgfm/SGFM/contents/images/uploads/2020/04/5e9601b6582510a13495b325.gif"
+          alt="Imatge nova web"
+        /></div
+    ></a>
+    <div class="container">
+      <h1 id="titol">Les temporades del Corte Inglés</h1>
+      <div class="row d-flex justify-content-center">
+        <div class="col-lg-3 col-md-6 col-6">
+          <input type="button" value="PRIMAVERA" id="boto_primavera" />
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <input type="button" value="ESTIU" id="boto_estiu" />
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <input type="button" value="TARDOR" id="boto_tardor" />
+        </div>
+        <div class="col-lg-3 col-md-6 col-6">
+          <input type="button" value="HIVERN" id="boto_hivern" />
+        </div>
+      </div>
+
+      <div id="foto">
+        <img
+          src="https://inmobiliariaaska.es/wp-content/themes/realestate-7/images/no-image.png"
+        />
+      </div>
+      <div id="footer">
+        <h2>Cap temporada selecionada</h2>
+      </div>
+      <p style="text-align: justify">
+        Aliquip laboris occaecat nisi enim ea esse. Mollit ea laborum do
+        pariatur minim pariatur culpa cupidatat Lorem mollit aliquip non. Duis
+        elit Lorem laboris adipisicing id quis ipsum sunt tempor consectetur
+        enim qui enim do. Adipisicing eiusmod est sint sint do laboris culpa
+        sunt irure quis labore in irure. Cupidatat nulla non officia ullamco qui
+        cillum sint labore consequat Lorem deserunt proident. Enim nostrud culpa
+        officia velit tempor amet incididunt minim nisi quis dolor eu est. Esse
+        velit pariatur nisi et in sit culpa mollit minim qui. In commodo velit
+        velit voluptate occaecat ad ut id tempor occaecat minim laborum esse.
+        Culpa qui ipsum ea reprehenderit commodo qui labore amet officia sunt
+        voluptate labore reprehenderit non. Nulla voluptate ullamco dolor
+        ullamco velit. Ut magna ea velit voluptate reprehenderit. Voluptate qui
+        veniam laborum exercitation amet amet minim consectetur magna et anim
+        laboris in adipisicing. Velit non elit elit reprehenderit labore
+        consectetur laborum incididunt exercitation. Sunt proident sunt sint
+        commodo in ad ut. Officia enim eu consequat ipsum id sunt deserunt anim
+        qui enim ullamco. Quis irure aliquip adipisicing minim veniam commodo
+        fugiat laboris. Esse reprehenderit cupidatat ad est voluptate deserunt
+        elit pariatur proident duis non commodo sint eu. Veniam occaecat
+        exercitation esse reprehenderit dolor sunt. Ea do velit laboris ea irure
+        velit minim adipisicing quis ut laborum mollit elit amet.
+      </p>
+    </div>
+    <a href=""
+      ><div id="bannerfooter">
+        <img
+          src="https://www.elcorteingles.es/sgfm/SGFM/contents/images/uploads/2020/05/5ec23ac49112cbc2631f3d03.gif"
+          alt="Enviaments"
+        /></div
+    ></a>
+    <script language="javascript">
+      $(function () {
+        $("#boto_primavera").click(function () {
+          $("#titol").css("color", "#ff8c69");
+          $("#footer").css("color", "#ff8c69");
+          $("#footer").html("<h2>Temporada de primavera</h2>");
+          $("#foto").html(
+            "<img src='https://www.elcorteingles.es/recursos/informacioncorporativa/img/portal/2017/07/05/ya-es-primavera.jpg'>"
+          );
+        });
+        $("#boto_estiu").click(function () {
+          $("#titol").css("color", "#87CEFA");
+          $("#footer").css("color", "#87CEFA");
+          $("#footer").html("<h2>Temporada d'estiu</h2>");
+          $("#foto").html(
+            "<img src='https://static.hosteltur.com/app/public/uploads/img/releases/2019/05/27/L_162251_horizontal-verano-cine-veci-2019.jpg'>"
+          );
+        });
+        $("#boto_tardor").click(function () {
+          $("#titol").css("color", "#FF4500");
+          $("#footer").css("color", "#FF4500");
+          $("#footer").html("<h2>Temporada de tardor</h2>");
+          $("#foto").html(
+            "<img src='https://www.lavanguardia.com/r/GODO/LV/p7/WebSite/2020/08/11/Recortada/img_jdelriov_20200811-130038_imagenes_lv_terceros_effm6n-wsaefy8b-kXpB-U482788136923K4C-992x558@LaVanguardia-Web.jpg'>"
+          );
+        });
+        $("#boto_hivern").click(function () {
+          $("#titol").css("color", "#008C2E");
+          $("#footer").css("color", "#008C2E");
+          $("#footer").html("<h2>Temporada d'hivern</h2>");
+          $("#foto").html(
+            "<img src='https://scontent-mad1-1.xx.fbcdn.net/v/t1.0-9/47250093_10157096920094728_8251930943661539328_o.jpg?_nc_cat=109&_nc_sid=cdbe9c&_nc_ohc=eYqb25PDetkAX9Vkn7J&_nc_ht=scontent-mad1-1.xx&oh=0062e01d30162f978f2212eca6d8e702&oe=5F733B35'>"
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
