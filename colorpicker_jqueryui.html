@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Plantilla</title>
+    <!--<link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />-->
+    <link
+      rel="icon"
+      href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/i/favicon.ico"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome CSS-->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!--Estils propis-->
+    <link href="plantilla_estil.css" rel="stylesheet" type="text/css" />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--jQueryUI-->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
+    <!--jQueryUI CSS-->
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estils-->
+    <style type="text/css">
+      #red,
+      #green,
+      #blue {
+        float: left;
+        clear: left;
+        width: 300px;
+        margin: 15px;
+      }
+      #resultat {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        position: absolute;
+        top: 70px;
+        left: 550px;
+      }
+      input {
+        margin: 6px;
+      }
+      #red .ui-slider-range {
+        background: #ef2929;
+      }
+      #red .ui-slider-handle {
+        border-color: #ef2929;
+      }
+      #green .ui-slider-range {
+        background: #8ae234;
+      }
+      #green .ui-slider-handle {
+        border-color: #8ae234;
+      }
+      #blue .ui-slider-range {
+        background: #729fcf;
+      }
+      #blue .ui-slider-handle {
+        border-color: #729fcf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tria el teu color!</h1>
+      <div id="red"></div>
+      <input id="resultatRed" type="text" size="1" />
+      <i class="fas fa-eye-dropper"></i>
+      <br />
+      <div id="green"></div>
+      <input id="resultatGreen" type="text" size="1" />
+      <i class="fas fa-eye-dropper"></i>
+      <br />
+      <div id="blue"></div>
+      <input id="resultatBlue" type="text" size="1" />
+      <i class="fas fa-eye-dropper"></i>
+      <div id="resultat"></div>
+    </div>
+    <script language="javascript">
+      $(function () {
+        $("#red").slider({
+          orientation: "horizontal",
+          range: "min",
+          min: 0,
+          max: 255,
+          value: 255,
+          slide: function (event, ui) {
+            $("#resultatRed").val(ui.value);
+            $("#resultat").css(
+              "background-color",
+              "rgb(" +
+                $("#resultatRed").val() +
+                "," +
+                $("#resultatGreen").val() +
+                "," +
+                $("#resultatBlue").val() +
+                ")"
+            );
+          },
+        });
+        $("#resultatRed").val($("#red").slider("value"));
+        $("#green").slider({
+          orientation: "horizontal",
+          range: "min",
+          min: 0,
+          max: 255,
+          value: 140,
+          slide: function (event, ui) {
+            $("#resultatGreen").val(ui.value);
+            $("#resultat").css(
+              "background-color",
+              "rgb(" +
+                $("#resultatRed").val() +
+                "," +
+                $("#resultatGreen").val() +
+                "," +
+                $("#resultatBlue").val() +
+                ")"
+            );
+          },
+        });
+        $("#resultatGreen").val($("#green").slider("value"));
+        $("#blue").slider({
+          value: 60,
+          orientation: "horizontal",
+          range: "min",
+          min: 0,
+          max: 255,
+          slide: function (event, ui) {
+            $("#resultatBlue").val(ui.value);
+            $("#resultat").css(
+              "background-color",
+              "rgb(" +
+                $("#resultatRed").val() +
+                "," +
+                $("#resultatGreen").val() +
+                "," +
+                $("#resultatBlue").val() +
+                ")"
+            );
+          },
+        });
+        $("#resultatBlue").val($("#blue").slider("value"));
+        $("#resultat").css(
+          "background-color",
+          "rgb(" +
+            $("#resultatRed").val() +
+            "," +
+            $("#resultatGreen").val() +
+            "," +
+            $("#resultatBlue").val() +
+            ")"
+        );
+      });
+    </script>
+  </body>
+</html>

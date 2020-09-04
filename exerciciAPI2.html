@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Plantilla</title>
+    <link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />
+    <!--<link
+      rel="icon"
+      href="https://jqueryui.com/jquery-wp-content/themes/jqueryui.com/i/favicon.ico"
+    />-->
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome CSS-->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!--Estils propis-->
+    <link href="plantilla_estil.css" rel="stylesheet" type="text/css" />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--jQueryUI-->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
+    <!--jQueryUI CSS-->
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estils-->
+    <style type="text/css">
+      #capa1 {
+        text-transform: capitalize;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <input id="boto1" type="button" value="Primera noticia" />
+      <input id="boto2" type="button" value="Segona noticia" />
+      <input id="boto3" type="button" value="Tercera noticia" />
+      <div id="capa1">
+        <h1>
+          Officia sunt minim cupidatat excepteur nulla veniam eiusmod ullamco in
+          ipsum adipisicing.
+        </h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Necessitatibus veritatis numquam eveniet voluptas, vitae dolorem
+          ratione suscipit provident inventore, et laboriosam, voluptates
+          deleniti voluptate? Sequi dicta cum necessitatibus nostrum eos.
+        </p>
+      </div>
+    </div>
+    <script language="javascript">
+      $(function () {
+        $("#boto1").click(function () {
+          $.get("https://jsonplaceholder.typicode.com/posts/1", function (
+            data,
+            status
+          ) {
+            $("#capa1 h1").text(data.title);
+            $("#capa1 p").text(data.body);
+          });
+        });
+        $("#boto2").click(function () {
+          $.get("https://jsonplaceholder.typicode.com/posts/2", function (
+            data,
+            status
+          ) {
+            $("#capa1 h1").text(data.title);
+            $("#capa1 p").text(data.body);
+          });
+        });
+        $("#boto3").click(function () {
+          $.get("https://jsonplaceholder.typicode.com/posts/3", function (
+            data,
+            status
+          ) {
+            $("#capa1 h1").text(data.title);
+            $("#capa1 p").text(data.body);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

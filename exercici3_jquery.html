@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Pràctica jQuery</title>
+    <link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome CSS-->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!--Estils CSS-->
+    <link href="plantilla_estil.css" rel="stylesheet" type="text/css" />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--Estils-->
+    <style type="text/css">
+      .titolcolor {
+        color: red;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Officia ullamco duis aliqua enim sint Lorem aute sit amet fugiat.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        dignissimos iure quas animi consequuntur tempore! Sunt quis sint nihil
+        quo! Maxime perspiciatis dignissimos earum ea, deserunt aut eos fugiat
+        praesentium.
+      </p>
+      <input id="botoAfegir" type="button" value="Afegir CSS" />
+      <input id="botoTreure" type="button" value="Treure CSS" />
+      <input id="botoToggle" type="button" value="Afegir/treure CSS" />
+    </div>
+    <script lang="javascript">
+      $(function () {
+          $("#botoAfegir").click(function(){
+              $("h1").addClass("titolcolor");
+          });
+          $("#botoTreure").click(function(){
+            $("h1").removeClass("titolcolor");
+          });
+          $("#botoToggle").click(function(){
+            $("h1").toggleClass("titolcolor");
+          });
+      });
+    </script>
+  </body>
+</html>

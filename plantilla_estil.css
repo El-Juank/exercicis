@@ -1,0 +1,34 @@
+body {
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+  font-family: "Balsamiq Sans", cursive;
+}
+.container {
+  margin-left: 90px;
+}
+input {
+  border: 2px solid black;
+  border-radius: 3px;
+  background-color: #fff;
+}
+input:active {
+  color: gray;
+}
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active {
+  color: white;
+  background-color: black;
+}
+img {
+  max-width: 300px;
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3);
+}
