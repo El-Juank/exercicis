@@ -59,6 +59,10 @@
       #targetes p {
         display: inline;
       }
+      #targetes h1 {
+        font-size: 16pt;
+        text-decoration: underline;
+      }
     </style>
   </head>
   <body>
@@ -83,10 +87,15 @@
                 var bicisTipus = estacions.num_bikes_available_types;
                 var disponibilitat =
                   (bicisDisponibles / llocsDisponibles) * 100;
+                //console.log(i);
+                //console.log(disponibilitat);
                 $("#resultat").append(
                   "<div id='targetes' class='targeta" +
                     [i] +
-                    " col-lg-3'>" +
+                    " col-lg-2 col-md-3 col-4'>" +
+                    "<h1>Estació nº" +
+                    [i] +
+                    ":</h1>" +
                     "<p>Bicicletes disponibles: </p>" +
                     bicisDisponibles +
                     "<br>" +
@@ -99,10 +108,13 @@
                 );
                 if (bicisDisponibles == 0 || disponibilitat <= 30) {
                   $(".targeta" + [i]).css("background-color", "red");
-                } else if (disponibilitat >= 60) {
+                } else if (disponibilitat > 30 && disponibilitat <= 60) {
                   $(".targeta" + [i]).css("background-color", "yellow");
-                } else if (disponibilitat <= 100) {
+                } else if (disponibilitat > 60) {
                   $(".targeta" + [i]).css("background-color", "green");
+                }
+                if (estacions.status == "NOT_IN_SERVICE") {
+                  $(".targeta" + [i]).css("background-color", "gray");
                 }
               }
             }
