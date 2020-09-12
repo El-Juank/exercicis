@@ -46,6 +46,9 @@
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
       rel="stylesheet"
     />
+    <!--LightBox-->
+    <link href="js/lightbox/dist/css/lightbox.css" rel="stylesheet" />
+    <script src="js/lightbox/dist/js/lightbox.js"></script>
     <!--Estils-->
     <style type="text/css">
       #header {
@@ -73,6 +76,15 @@
         max-height: 200px;
         object-fit: cover;
       }
+      a p {
+        color: black;
+        font-size: 12pt;
+        width: 275px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 8px;
+      }
     </style>
   </head>
   <body>
@@ -86,8 +98,8 @@
           size="25"
         />
         <button id="botobuscar"><i class="fas fa-search"></i></button>
-        <!--<input id="botobuscar" value="Buscar" type="button" />-->
       </div>
+
       <div
         id="resultats"
         class="row d-flex align-items-stretch justify-content-center"
@@ -106,8 +118,21 @@
               for (i = 0; i < data.photos.photo.length; i++) {
                 var photo = data.photos.photo[i];
                 $("#resultats").append(
-                  "<div class='col-lg-4 col-md-6 mb-4 d-flex justify-content-center'>" +
+                  "<div class='col-lg-4 col-md-6 d-flex justify-content-center'>" +
                     "<div class='imatge'>" +
+                    "<a data-title='" +
+                    photo.title +
+                    "' data-lightbox='" +
+                    busqueda +
+                    "' href='https://farm" +
+                    photo.farm +
+                    ".staticflickr.com/" +
+                    photo.server +
+                    "/" +
+                    photo.id +
+                    "_" +
+                    photo.secret +
+                    ".jpg'>" +
                     "<img src='https://farm" +
                     photo.farm +
                     ".staticflickr.com/" +
@@ -117,6 +142,10 @@
                     "_" +
                     photo.secret +
                     ".jpg'>" +
+                    "<p>" +
+                    photo.title +
+                    "</p>" +
+                    "</a>" +
                     "</div>" +
                     "</div>"
                 );
@@ -136,8 +165,21 @@
                 for (i = 0; i < data.photos.photo.length; i++) {
                   var photo = data.photos.photo[i];
                   $("#resultats").append(
-                    "<div class='col-lg-4 col-md-6 mb-4 d-flex justify-content-center'>" +
+                    "<div class='col-lg-4 col-md-6 d-flex justify-content-center'>" +
                       "<div class='imatge'>" +
+                      "<a data-title='" +
+                      photo.title +
+                      "' data-lightbox='" +
+                      busqueda +
+                      "' href='https://farm" +
+                      photo.farm +
+                      ".staticflickr.com/" +
+                      photo.server +
+                      "/" +
+                      photo.id +
+                      "_" +
+                      photo.secret +
+                      ".jpg'>" +
                       "<img src='https://farm" +
                       photo.farm +
                       ".staticflickr.com/" +
@@ -147,6 +189,10 @@
                       "_" +
                       photo.secret +
                       ".jpg'>" +
+                      "<p>" +
+                      photo.title +
+                      "</p>" +
+                      "</a>" +
                       "</div>" +
                       "</div>"
                   );
