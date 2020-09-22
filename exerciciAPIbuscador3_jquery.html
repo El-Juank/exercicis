@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <!--Required meta tags-->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="author" content="El Juank" />
+    <title>Buscador d'imatges</title>
+    <link
+      rel="icon"
+      href="https://jquery.com/jquery-wp-content/themes/jquery.com/i/favicon.ico"
+    />
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--Font Awesome CSS-->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <!--Estils propis-->
+    <link href="plantilla_estil.css" rel="stylesheet" type="text/css" />
+    <!--jQuery-->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <!--jQueryUI-->
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"
+    ></script>
+    <!--jQueryUI CSS-->
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <!--Google Fonts-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!--LightBox-->
+    <link href="js/lightbox/dist/css/lightbox.css" rel="stylesheet" />
+    <script src="js/lightbox/dist/js/lightbox.js"></script>
+    <!--Estils-->
+    <style type="text/css">
+      #header {
+        margin-left: auto;
+        margin-right: auto;
+        width: 357px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .imatge {
+        padding: 15px;
+        margin: auto;
+        display: block;
+      }
+      button {
+        border: 2px solid black;
+        border-radius: 3px;
+        background-color: white;
+      }
+      button:active {
+        background-color: black;
+        color: white;
+      }
+      img {
+        max-width: 300px;
+        max-height: 200px;
+        object-fit: cover;
+      }
+      a p {
+        color: black;
+        font-size: 12pt;
+        width: 275px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-top: 8px;
+      }
+      .sideImage {
+        position: fixed;
+        right: 0px;
+        background-color: black;
+        width: 50%;
+        height: 100%;
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <h1>Cercador d'imatges</h1>
+        <input
+          id="text_buscar"
+          type="text"
+          placeholder="Cerca les teves imatges"
+          size="25"
+        />
+        <button id="botobuscar"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="sideImage">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+          impedit molestias aperiam pariatur et, ea aliquid sapiente quaerat
+          nam? Eos omnis rerum odit incidunt rem adipisci quod numquam, pariatur
+          asperiores.
+        </p>
+      </div>
+      <div
+        id="resultats"
+        class="row d-flex align-items-stretch justify-content-center"
+      ></div>
+    </div>
+    <script language="javascript">
+      $(function () {
+        $("#botobuscar").click("buscar", function () {
+          $("#resultats").empty();
+          var busqueda = document.getElementById("text_buscar").value;
+          $.get(
+            "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=250a292a0f8a61b7e329e576dd1505c7&text=" +
+              busqueda +
+              "&format=json&nojsoncallback=1",
+            function (data, status) {
+              var i = 0;
+              for (i = 0; i < data.photos.photo.length; i++) {
+                var photo = data.photos.photo[i];
+                $("#resultats").append(
+                  "<div class='imatges col-lg-4 col-md-6 d-flex justify-content-center'>" +
+                    "<div class='imatge'>" +
+                    "<img src='https://farm" +
+                    photo.farm +
+                    ".staticflickr.com/" +
+                    photo.server +
+                    "/" +
+                    photo.id +
+                    "_" +
+                    photo.secret +
+                    ".jpg'>" +
+                    "<p>" +
+                    photo.title +
+                    "</p>" +
+                    "</div>" +
+                    "</div>"
+                );
+              }
+              $("img").click(function () {
+                $(".sideImage").css("visibility", "visible");
+                $("#resultats").css("width", "50%");
+                $(".imatges")
+                  .addClass("col-md-12")
+                  .removeClass("col-lg-4 col-md-6");
+                window.alert("Hola!");
+                var imgSide = $(this).attr("src");
+              });
+            }
+          );
+        });
+        /*$("#text_buscar").on("keypress", function (e) {
+          if (e.which == 13) {
+            $("#resultats").empty();
+            var busqueda = document.getElementById("text_buscar").value;
+            $.get(
+              "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=250a292a0f8a61b7e329e576dd1505c7&text=" +
+                busqueda +
+                "&format=json&nojsoncallback=1",
+              function (data, status) {
+                var i = 0;
+                for (i = 0; i < data.photos.photo.length; i++) {
+                  var photo = data.photos.photo[i];
+                  $("#resultats").append(
+                    "<div class='col-lg-4 col-md-6 d-flex justify-content-center'>" +
+                      "<div class='imatge'>" +
+                      "<img src='https://farm" +
+                      photo.farm +
+                      ".staticflickr.com/" +
+                      photo.server +
+                      "/" +
+                      photo.id +
+                      "_" +
+                      photo.secret +
+                      ".jpg'>" +
+                      "<p>" +
+                      photo.title +
+                      "</p>" +
+                      "</div>" +
+                      "</div>"
+                  );
+                }
+              }
+            );
+          }
+        });*/
+      });
+    </script>
+  </body>
+</html>

@@ -107,10 +107,11 @@
     </div>
     <script language="javascript">
       $(function () {
-        $("#botobuscar").click(function () {
+        $("#botobuscar").click('buscar', function () {
+          $("#resultats").empty();
           var busqueda = document.getElementById("text_buscar").value;
           $.get(
-            "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text=" +
+            "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=93075bc0a33fb99dd702ea37a7bdb181&text=" +
               busqueda +
               "&format=json&nojsoncallback=1",
             function (data, status) {
@@ -155,9 +156,10 @@
         });
         $("#text_buscar").on("keypress", function (e) {
           if (e.which == 13) {
+            $("#resultats").empty();
             var busqueda = document.getElementById("text_buscar").value;
             $.get(
-              "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0558dda4ed8ce29a002c7f6cc7e3a51e&text=" +
+              "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=93075bc0a33fb99dd702ea37a7bdb181&text=" +
                 busqueda +
                 "&format=json&nojsoncallback=1",
               function (data, status) {
